@@ -1,0 +1,173 @@
+
+
+        <style>
+            
+
+.dropdown-container {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+/* Dropdown styling */
+.custom-dropdown {
+  position: relative;
+  width: 270px;
+  user-select: none;
+}
+
+.dropdown-selected {
+    color: #484848;
+  background-color: #fff;
+  padding: 11px 10px;
+  border: 0px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  font-size: 11px;
+}
+
+/* Add a little downward arrow indicator */
+.dropdown-selected::after {
+  content: "";
+  font-size: 9px;
+  color: #666;
+}
+
+/* Options list styling */
+.dropdown-options {
+  list-style-type: none;
+  padding: 12px 6px;
+  margin: 16px 0 0 0;
+  position: absolute;
+  width: 130%;
+  background-color: #fff;
+  border: 0px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none; /* Hidden by default */
+  z-index: 51;
+  
+}
+
+/* Toggled via JavaScript */
+.dropdown-options.show {
+  display: block;
+}
+
+.dropdown-options li {
+    color: #484848;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+text-align: left;
+
+  
+}
+
+.dropdown-options li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-options li:hover {
+  background-color: #f1f1f1;
+  color: #FF5A5F;
+  border-radius: 30px;
+  
+}
+
+/* Button styling */
+#navigate-btn {
+  padding: 12px 40px;
+  border: none;
+  background-color: #FF5A5F;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 11px;
+}
+#navigate-btn:hover {
+  background-color: #f1f1f1;
+  color: #484848;
+}
+
+        </style>
+
+        <div class="dropdown-container w3-margin-top" style="border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 6px; border-radius: 30px; max-width: 360px; margin-left: auto;
+  margin-right: auto;">
+  <div class="custom-dropdown" id="custom-dropdown">
+    <div class="dropdown-selected" id="dropdown-selected">Select a destination...</div>
+    
+    <ul class="dropdown-options w3-small" id="dropdown-options">
+      <li data-value="all" data-link="{{ site.url }}/himachal-tour-packages.html"><i class="fas fa-fire w3-large"></i> All Tour Packages</li>
+      <li data-value="shimla" data-link="{{ site.url }}/shimla-tour-packages.html"><i class="fas fa-mountain w3-large"></i> Shimla Tour Packages</li>
+      <li data-value="manali" data-link="{{ site.url }}/manali-tour-packages.html"><i class="fas fa-skiing-nordic w3-large"></i> Manali Tour Packages</li>
+      <li data-value="dharamshala" data-link="{{ site.url }}/dharamshala-tour-packages.html"><i class="fas fa-ship w3-large"></i> Dharamshala Tour Packages</li>
+      <li data-value="dalhousie" data-link="{{ site.url }}/dalhousie-tour-packages.html"><i class="fas fa-ship w3-large"></i> Dalhousie Tour Packages</li>
+      <li data-value="lehladakh" data-link="{{ site.url }}/leh-ladakh-tour-packages.html"><i class="fa fa-vihara w3-large" aria-hidden="true"></i> Leh Ladakh Tour Packages</li>
+      <li data-value="spiti" data-link="{{ site.url }}/spiti-tour-packages.html"><i class="fa-solid fa-bridge w3-large"></i> Spiti Travel Packages</li>
+    
+    </ul>
+  </div>
+
+  <button id="navigate-btn" disabled><i class="fas fa-search"></i></button>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const dropdown = document.getElementById('custom-dropdown');
+  const selectedText = document.getElementById('dropdown-selected');
+  const optionsList = document.getElementById('dropdown-options');
+  const options = optionsList.querySelectorAll('li');
+  const navigateBtn = document.getElementById('navigate-btn');
+
+  let currentLink = '';
+  let currentValue = '';
+
+  // 1. Open/Close the dropdown on click
+  selectedText.addEventListener('click', () => {
+    optionsList.classList.toggle('show');
+  });
+
+  // 2. Handle option selection
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      // Update the displayed text
+      selectedText.textContent = option.textContent;
+      
+      // Get the value and the link from data attributes
+      currentValue = option.getAttribute('data-value');
+      currentLink = option.getAttribute('data-link');
+      
+      console.log('Selected Value:', currentValue); // Logs the selected value
+
+      // Enable the button now that a selection is made
+      navigateBtn.disabled = false;
+
+      // Close the dropdown
+      optionsList.classList.remove('show');
+    });
+  });
+
+  // 3. Close the dropdown if the user clicks anywhere outside of it
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) {
+      optionsList.classList.remove('show');
+    }
+  });
+
+  // 4. Handle button click to open the link
+  navigateBtn.addEventListener('click', () => {
+    if (currentLink) {
+      // Open in a new tab. Change '_blank' to '_self' to open in the same tab.
+      window.open(currentLink, '_self'); 
+    }
+  });
+});
+</script>

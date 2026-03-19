@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keen-Slider - Shimla Tour Packages</title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" />
+
+    <style>
+        /* --- Base Layout --- */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .carousel-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header & Buttons (Right-Aligned) --- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-button {
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            color: #333;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .nav-button:hover:not(:disabled) {
+            background-color: #009688; /* W3 Teal to match your theme */
+            border-color: #009688;
+            color: white;
+        }
+
+        /* Dynamically hides buttons at the start/end */
+        .nav-button:disabled {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* --- Keen-Slider Custom Fixes --- */
+        /* Forces the slides to be exactly 320px wide */
+        .keen-slider__slide {
+            min-width: 320px;
+            max-width: 320px;
+            /* Prevents W3.CSS from overriding the flex behavior */
+            display: block; 
+        }
+
+        /* Mobile adjustments for the header */
+        @media (max-width: 600px) {
+            .section-header h2 { font-size: 1.4rem; }
+            .nav-button { width: 38px; height: 38px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="w3-padding-64">
+
+    <div class="carousel-wrapper w3-container w3-content">
+        
+        <div class="section-header">
+            <h2>Shimla Tour Packages</h2>
+            <div class="nav-controls">
+                <button class="nav-button btn-prev" aria-label="Previous">❮</button>
+                <button class="nav-button btn-next" aria-label="Next">❯</button>
+            </div>
+        </div>
+        
+        <div class="keen-slider">
+            
+            {% for post in site.posts limit: 5 %}
+                {% if post.categories contains "Shimla" %}
+                    
+                    <div class="keen-slider__slide">
+                        
+                        <div class="w3-card w3-white w3-round-large" style="height: 100%; overflow: hidden;">
+                            <a href="{{site.url}}{{ post.url | relative_url }}" style="text-decoration: none;">
+                                
+                                <div class="w3-display-container" style="height: 250px; width: 100%;">
+                                    <img alt="{{ post.title }}" src="{{site.url }}/assets/images/{{ post.img }}" style="object-fit: cover; height: 100%; width: 100%;">
+                                    <div class="w3-display-topleft" style="padding: 12px;">
+                                        <div class="w3-small w3-white w3-card-4" style="padding: 4px 16px; border-radius: 30px; font-weight: bold;">
+                                            Popular
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w3-container w3-padding-16">
+                                    <div class="w3-row">
+                                        <div class="w3-left w3-text-gray"><b><i class="fa-solid fa-clock" style="margin-right: 4px;"></i> {{ post.duration }}</b></div>
+                                        <div class="w3-right w3-text-gray">
+                                            <span><i class="fa fa-star w3-text-green"></i> {{ post.rating }}</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 700; -webkit-box-orient: vertical; font-size:18px;">
+                                        {{ post.title }}
+                                    </h3>
+
+                                    <div class="w3-text-gray w3-small w3-round-xxlarge" style="padding: 6px 0px;">
+                                        <b><i>Destinations: </i>{{ post.destinations }}</b>
+                                    </div>
+
+                                    <b class="w3-xlarge" style="margin-top: 0px;">{{ post.price }} <span class="w3-small w3-text-gray">{{ post.priceper }}</span> </b>
+                                    <br><strike class="w3-text-gray">{{ post.xprice }}</strike>  
+                                </div>
+                            </a>
+                            
+                            <div class="w3-container w3-padding-bottom w3-padding-16 w3-light-gray">
+                                <div class="w3-row">
+                                    <div class="w3-col" style="width: 50px;">
+                                        <a href="tel:+918219471645">
+                                            <button class="w3-button w3-white w3-border w3-border-gray w3-hover-teal" style="width: 38px; height: 38px; padding: 0px; border-radius: 50%;">
+                                                <i class="fa fa-phone w3-text-teal"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="w3-rest">
+                                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-hover-dark-gray w3-block" style="border-radius: 30px; font-weight: bold;">
+                                            Request Callback
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    
+                {% endif %}
+            {% endfor %}
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Find all carousel wrappers on the page (supports multiple carousels)
+            const wrappers = document.querySelectorAll('.carousel-wrapper');
+
+            wrappers.forEach((wrapper) => {
+                
+                // Get the elements specific to this wrapper
+                const sliderNode = wrapper.querySelector('.keen-slider');
+                const btnPrev = wrapper.querySelector('.btn-prev');
+                const btnNext = wrapper.querySelector('.btn-next');
+
+                // Function to handle hiding/showing buttons
+                const updateButtons = (instance) => {
+                    const currentIdx = instance.track.details.rel; // Current slide index
+                    const maxIdx = instance.track.details.maxIdx;  // Last slide index
+
+                    // Hide Prev button if on the first slide
+                    if (currentIdx === 0) {
+                        btnPrev.setAttribute('disabled', 'disabled');
+                    } else {
+                        btnPrev.removeAttribute('disabled');
+                    }
+
+                    // Hide Next button if on the last slide
+                    if (currentIdx >= maxIdx) {
+                        btnNext.setAttribute('disabled', 'disabled');
+                    } else {
+                        btnNext.removeAttribute('disabled');
+                    }
+                };
+
+                // Initialize Keen-Slider
+                const slider = new KeenSlider(sliderNode, {
+                    loop: false,
+                    slides: {
+                        perView: "auto", // Tells Keen to look at the CSS for slide width (320px)
+                        spacing: 20,     // Automatically adds a 20px gap between slides!
+                    },
+                    // Fire the button update logic on these specific Keen events
+                    created: (instance) => updateButtons(instance),
+                    slideChanged: (instance) => updateButtons(instance),
+                    optionsChanged: (instance) => updateButtons(instance),
+                });
+
+                // Attach click events to the buttons
+                if (btnPrev) btnPrev.addEventListener('click', () => slider.prev());
+                if (btnNext) btnNext.addEventListener('click', () => slider.next());
+            });
+            
+        });
+    </script>
+
+</body>
+</html>
