@@ -4,9 +4,8 @@
 <html lang="en">
 
 <head>
-  <title>Shimla Manali Honeymoon Travel Package 4 Nights 5 Days From Dehli By Cab - Tripquestholidays.in
-</title>
-  <link rel="icon" type="image/x-icon" href="https://tripquestholidays.in/assets/images/favicon.png">
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.ico">
   <meta name="description"
     content="Book your dream Shimla Manali honeymoon travel package with top-rated resorts, scenic tours, and private cab services. Enjoy snow-capped mountains, cozy stays, and unforgettable honeymoon moments in Himachal Pradesh. Get best prices and customized itineraries for couples today!">
   <meta name="keywords"
@@ -157,7 +156,7 @@
                 <p>Please, Fill The From And Get Call From Our Expert Tour Executive For A Customized Travel Package.</p>
 
               </div>
-              <hr>
+             <div class="HR"></div>
               <form class="w3-text-dark-gray w3-row"
                 onsubmit="alert('Thanks For Submiting The Form. Our Executives Will Reach To You Within 24 Hours');"
                 method="page">
@@ -215,34 +214,7 @@
     </div>
   </div>
  <!--bottom fixed-->
-  <div id="Fixed"
-    class="w3-display-container w3-row w3-white w3-border-top w3-border-light-gray w3-hide-large w3-hide-medium w3-animate-zoom"
-    style="width: 100%; padding:12px; position: fixed; bottom: -190px; left: 0px; z-index: 30;">
-    <div class="w3-display-topright" style="padding: 0px 12px; margin-top: -96px;">
-      <a href="tel:9816631256">
-        <div class="w3-ro w3-teal w3-card-4"
-          style="border-radius:30px ; height: 40px; width: 40px;  padding: 8px 12px; margin-right: 6px; margin-bottom: 8px;">
-          <i class="w3-text-white  fa fa-phone small" style="padding-left:0px ;"></i>
-        </div>
-      </a>
-      <a href="https://wa.me/919816631256">
-        <div class="w3-ro w3-green w3-card-4"
-          style="border-radius:30px ; height: 40px; width: 40px; padding: 10px 12px; margin-right: 6px;">
-          <i class="w3-text-white  fab fa-whatsapp w3-large" style="padding-left:0px ;"></i>
-        </div>
-      </a>
-
-    </div>
-    <div class="w3-row">
-      <div class="w3-col w3-right" style="width: 110px;">
-        <button onclick="document.getElementById('id01').style.display='block'"
-          class="w3-button w3-teal w3-small w3-card-4" style="border-radius: 30px;">Send Enquiry</button>
-      </div>
-      <div class="w3-rest">
-        <b class="w3-xlarge">INR 10,999 <span class="w3-small w3-text-gray">Onwards</span></b>
-      </div>
-    </div>
-  </div>
+ 
   <!--model bottom  fixed-->
   <div class="w3-container">
 
@@ -267,7 +239,7 @@
                 </p>
 
               </div>
-              <hr>
+             <div class="HR"></div>
               <form class="w3-text-dark-gray w3-row"
                 onsubmit="alert('Thanks For Submiting The Form. Our Executives Will Reach To You Within 24 Hours');"
                 method="page">
@@ -376,6 +348,20 @@
         opacity: 0;
       }
     }
+    .HR {
+  margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    min-height: 1px;
+    min-width: 100%;
+    background: linear-gradient(270deg, hsla(0, 0%, 100%, .05) -.13%, hsla(0, 0%, 88%, .05) 0, #e0e0e0 49.17%, hsla(0, 0%, 88%, .05));
+}
+@media (max-width: 576px) {
+    .HR {
+        min-width: fit-content;
+        margin: 30px 0;
+    }
+}
   </style>
 
 <!-- Navbar -->
@@ -384,16 +370,16 @@
 <!--ofr-->
 
 <!--Post Header-->
- <div class="w3-content w3-row w3-text-gray w3-margin-bottom w3-hide-small" style="padding:0px 16px; padding-bottom: 0px; overflow: hidden;
+ <div class="w3-content w3-margin-top w3-row w3-text-gray w3-margin-bottom w3-hide-small" style="padding:0px 16px; padding-bottom: 0px; overflow: hidden;
    display: -webkit-box;
    -webkit-line-clamp: 1;
            line-clamp: 1; 
    -webkit-box-orient: vertical;">
-   <span class="w3-hover-text-teal"> <a href="https://tripquestholidays.in">
+   <span class="w3-hover-text-teal"> <a href="{{ site.url }}">
     <div class="w3-col" style="width: 20px; padding-top: 2px; padding-right: 3px;">
       <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.5" d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#26ccc2"></path>
-<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#26ccc2"></path>
+<path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#484848"></path>
+<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#ffffff"></path>
 </svg></div>
     Home</a></span> / <span class="w3-hover-text-teal"> Honeymoon</span> / <span class="w3-hover-text-teal"> Shimla Manali 4N 5D Honeymoon Package From Delhi By Cab</span></div>
 
@@ -405,9 +391,9 @@
     <div class="w3-half" style="padding-right: 6px; padding-top: 8px; padding-left: 16px;">
 
       <div class="w3-row " style="height: 320px; border-radius: 15px 0px 0px 15px;">
-        <img class="w3-border w3-border-light-gray" alt="shimla couple tour from chandigarh"
+        <img class="w3-border w3-border-light-gray" alt="{{ page.alt }}"
           style="object-fit: cover; overflow: hidden; height: 100%; width: 100%; border-radius: 15px 0px 0px 15px;"
-          src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+          src="{{ site.url }}/assets/images/{{ page.img }}" />
 
       </div>
 
@@ -415,27 +401,27 @@
     <div class="w3-half" style="height: 320px;">
       <div class="w3-half" style="padding-top:8px;">
         <div class="w3-row " style="height: 157px;">
-          <img class="w3-border w3-border-light-gray" alt="shimla couple tour from chandigarh"
-            style="object-fit: cover; overflow: hidden; height: 100%; width: 100%; " src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+          <img class="w3-border w3-border-light-gray" alt="{{ page.alt }}"
+            style="object-fit: cover; overflow: hidden; height: 100%; width: 100%; " src="{{ site.url }}/assets/images/{{ page.img2 }}" />
 
         </div>
         <div class="w3-row " style="height: 157px; margin-top: 6px;">
-          <img class="w3-border w3-border-light-gray" alt="shimla couple tour from chandigarh"
-            style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+          <img class="w3-border w3-border-light-gray" alt="{{ page.alt }}"
+            style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img3 }}" />
 
         </div>
       </div>
       <div class="w3-half" style="padding-top:8px; padding-left: 6px; padding-right: 16px;">
         <div class="w3-row " style="height: 157px;">
-          <img class="w3-border w3-border-light-gray" alt="shimla couple tour from chandigarh"
+          <img class="w3-border w3-border-light-gray" alt="{{ page.alt }}"
             style="object-fit: cover; overflow: hidden; height: 100%; width: 100%; border-radius: 0px 15px 0px 0px;"
-            src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+            src="{{ site.url }}/assets/images/{{ page.img4 }}" />
 
         </div>
         <div class="w3-row " style="height: 157px; margin-top: 6px;">
-          <img class="w3-border w3-border-light-gray" alt="shimla couple tour from chandigarh"
+          <img class="w3-border w3-border-light-gray" alt="{{ page.alt }}"
             style="object-fit: cover; overflow: hidden; height: 100%; width: 100%; border-radius: 0px 0px 15px 0px;"
-            src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+            src="{{ site.url }}/assets/images/{{ page.img5 }}" />
 
         </div>
       </div>
@@ -449,7 +435,7 @@
     <div class="w3-display-bottomleft w3-white w3-hide-large w3-hide-medium"
       style="box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.19), 0 4px 20px 0 rgba(0, 0, 0, 0.2); ; z-index: 30; width: 100%; border-radius: 15px 15px 0px 0px; padding: 0px 18px; margin-bottom: -3px;">
       <div class="w3-row w3-margin-bottom" style="margin-top: 30px;">
-        <div class="w3-col s6 m6 l6"><strong class="w3-text-gray"><i class="w3-sand w3-round-xxlarge w3-text-teal fa-regular fa-clock"
+        <div class="w3-col s6 m6 l6"><strong class="w3-text-gray"><i class="w3-light-gray w3-round-xxlarge w3-text-dark-gray fa-regular fa-clock"
               style="margin-right: 4px; padding: 6px;"></i> 4 Nights 5 Days</strong></div>
         <div class="w3-col s6 m6 l6 w3-right">
           <div class="w3-right w3-text-gray">
@@ -485,24 +471,24 @@
 
 
       <div class="swiper-slide" style="height: 570px; width: 100%;">
-        <img alt="shimla couple tour from chandigarh"
-          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+        <img alt="{{ page.alt }}"
+          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img }}" />
       </div>
       <div class="swiper-slide" style="height: 570px; width: 100%;">
-        <img alt="shimla couple tour from chandigarh"
-          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+        <img alt="{{ page.alt }}"
+          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img2 }}" />
       </div>
       <div class="swiper-slide" style="height: 570px; width: 100%;">
-        <img alt="shimla couple tour from chandigarh"
-          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+        <img alt="{{ page.alt }}"
+          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img3 }}" />
       </div>
       <div class="swiper-slide" style="height: 570px; width: 100%;">
-        <img alt="shimla couple tour from chandigarh"
-          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+        <img alt="{{ page.alt }}"
+          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img4 }}" />
       </div>
       <div class="swiper-slide" style="height: 570px; width: 100%;">
-        <img alt="shimla couple tour from chandigarh"
-          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="https://tripquestholidays.in/assets/images/6/1.jpg" />
+        <img alt="{{ page.alt }}"
+          style="object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.img5 }}" />
       </div>
 
     </div>
@@ -531,83 +517,87 @@
 <p class="w3-text-gray">
   Experience the magic of the hills with our Shimla Manali 4 Nights 5 Days Honeymoon Package from Delhi by cab. This romantic getaway is perfect for newlyweds seeking peace, breathtaking mountain views, and cozy moments together. </p>
     
-    <div class="w3-row w3-padding w3-round2 w3-teal">
-      
-      <div class="w3-center">
-<div class="w3-tag w3-round2 w3-white w3-margin-top"><b>SPECIAL OFFER</b></div>
-<p class="w3-large"><b>Get Your Coustomized Honeymoon Travel Package with 15% Discount</b></p>
-<button class="w3-button w3-small w3-round2 w3-white w3-margin-bottom"  onclick="document.getElementById('id02').style.display='block'" ><b>Get Your Coustomized Trip Now</b></button>
-</div>
-    </div>
     
     <p>
       Enjoy a scenic drive from Delhi to Shimla, explore the Mall Road, Jakhoo Temple, and Kufri’s snowy charm. Continue to Manali for an unforgettable honeymoon amid serene valleys and adventure spots like Solang Valley and Rohtang Pass. Our all‑inclusive honeymoon package offers comfortable stays, private cab transfers, and memorable experiences, making your Shimla Manali trip from Delhi relaxing, romantic, and hassle‑free.
 
     </p>
 
-<hr style="margin:2px 0px; border-top:2px solid #26ccc2; border-radius:30px; width:40%;">
+<div class="HR"></div>
 <!-- Social Share Buttons-->
 
 
 
 
 <!--share Buttons-->
+
+<div class="w3-row w3-stretch" style="padding: 6px 16px; background-image: linear-gradient(to bottom, #ffffff,#ffffff, #f9f9f9d8); box-shadow: 0 4px 20px -12px rgba(0,0,0,0.19);
+  border-radius: 0px 0px 15px 15px; z-index: 40; position: -webkit-sticky;
+position: sticky;
+top:63px;">
+<div class="w3-col w3-right" style="width: 110px;">
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-small w3-card-4" style="border-radius: 30px; margin-top: 8px;">Enquire Now</button>
+      </div>
+<div class="w3-rest">
+              <p style="margin: 0px;"><b class="w3-xlarge">INR 35,990 <span class="w3-small w3-text-gray">Onwards</span></b>
+                <br><strike class="w3-text-gray">INR 45,990</strike>
+              </p>
+            </div>
+
+              
+            </div>
+
+
           <div class="w3-row">
 
 
 
             
-            <hr>
-            <div>
-              <p><b class="w3-xlarge">INR 35,990 <span class="w3-small w3-text-gray">Onwards</span></b>
-                <br><strike class="w3-text-gray">INR 45,990</strike>
-              </p>
-
-              <hr>
-            </div>
+           <div class="HR"></div>
+            
             <div class="w3-row">
               <div class="w3-col s12 m4 l4" style="padding: 6px 0px;">
-                <i class="fa-solid fa-taxi w3-text-teal w3-sand"
+                <i class="fa-solid fa-taxi w3-text-dark-gray w3-light-gray"
                   style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i> <strong
                   class="w3-text-gray">Transfers Included</strong>
               </div>
               <div class="w3-col s12 m4 l4" style="padding: 6px 0px;">
-                <i class="fas fa-bed w3-text-teal w3-sand"
+                <i class="fas fa-bed w3-text-dark-gray w3-light-gray"
                   style="border-radius: 30px; padding: 8px 6px; margin-right: 6px;"></i> <strong
                   class="w3-text-gray">Stay Included</strong>
               </div>
               <div class="w3-col s12 m4 l4" style="padding: 6px 0px;">
-                <i class="fa-solid fa-utensils w3-text-teal w3-sand"
+                <i class="fa-solid fa-utensils w3-text-dark-gray w3-light-gray"
                   style="border-radius: 30px; padding: 8px 8.5px; margin-right: 12px;"></i> <strong
                   class="w3-text-gray">Breakfast & Dinner Included</strong>
               </div>
               <div class="w3-col s12 m4 l4" style="padding: 6px 0px;">
-                <i class="fa-solid fa-images w3-text-teal w3-sand"
+                <i class="fa-solid fa-images w3-text-dark-gray w3-light-gray"
                   style="border-radius: 30px; padding: 8px 7px; margin-right: 8px;"></i> <strong
                   class="w3-text-gray">Sightseeing Included</strong>
               </div>
             </div>
 
-            <hr>
+           <div class="HR"></div>
 
           </div>
 
           <div class="w3-row">
             <h2 class="w3-large w3-text-dark-gray"><strong>
-              <i class="fa-solid fa-clock w3-text-teal w3-sand" style="border-radius: 30px; padding: 7.5px 7.5px; margin-right: 6px;"></i> 
+              <i class="fa-solid fa-clock w3-text-dark-gray w3-light-gray" style="border-radius: 30px; padding: 7.5px 7.5px; margin-right: 6px;"></i> 
               Trip Duration</strong></h2>
             <div>
-              <span class="w3-tag w3-border w3-border-sand w3-col w3-center w3-text-dark-gray w3-margin-top w3-margin-bottom" style="background-color: #26ccc210; padding: 0px 20px; margin-right: 6px; height: 31px; width: fit-content; border-radius: 15px; display: flex;
+              <div class="w3-tag w3-light-gray w3-border w3-border-sand w3-col w3-center w3-text-dark-gray w3-margin-top w3-margin-bottom" style="padding: 6px 20px; margin-right: 6px; width: fit-content; border-radius: 15px; display: flex;
                 align-items: center;
-                justify-content: center;"><strong>4 Nights | 5 Days</strong></span>
+                justify-content: center;"><strong>4 Nights | 5 Days</strong></div>
             </div>
           </div>
 
           <div class="w3-row ">
             <h2 class="w3-large w3-text-dark-gray"><strong>
-              <i class="fa-solid fa-road w3-text-teal w3-sand" style="border-radius: 30px; padding: 7.5px 6.5px; margin-right: 6px;"></i>
+              <i class="fa-solid fa-road w3-text-dark-gray w3-light-gray" style="border-radius: 30px; padding: 7.5px 6.5px; margin-right: 6px;"></i>
                Destination Routes</strong></h2>
-            <div class="w3-row w3-border-sand w3-border w3-padding w3-margin-top w3-margin-bottom" style="background-color: #26ccc210; border-radius: 15px; padding: 0px 12px;">
+            <div class="w3-light-gray w3-row w3-border-sand w3-border w3-padding w3-margin-top w3-margin-bottom" style="border-radius: 15px; padding: 0px 12px;">
               <strong class="w3-text-dark-gray w3-small">Delhi <i class="fa-solid fa-arrow-right"></i> Shimla <i class="fa-solid fa-arrow-right"></i>Manali <i class="fa-solid fa-arrow-right"></i> Delhi </strong>
             </div>
           </div>
@@ -617,15 +607,15 @@
             <h2 class="w3-large w3-text-dark-gray">
               
               <strong>
-                <i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 7.5px 7.5px; margin-right: 6px;"></i>
+                <i class="fa-solid fa-hotel w3-text-dark-gray w3-light-gray" style="border-radius: 30px; padding: 7.5px 7.5px; margin-right: 6px;"></i>
                  Stay Category</strong></h2>
-            <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom" style="background-color: #26ccc210; border-radius: 15px; padding: 0px 12px;">
+            <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom w3-light-gray" style=" border-radius: 15px; padding: 0px 12px;">
               <strong class="w3-text-dark-gray">Deluxe</strong>
             </div>
-            <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom" style="background-color: #26ccc210; border-radius: 15px; padding: 0px 12px;">
+            <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom w3-light-gray" style=" border-radius: 15px; padding: 0px 12px;">
                 <strong class="w3-text-dark-gray">Super Deluxe</strong>
               </div>
-              <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom" style="background-color: #26ccc210; border-radius: 15px; padding: 0px 12px;">
+              <div class="w3-tag w3-border w3-border-sand w3-padding w3-margin-top w3-margin-bottom w3-light-gray" style=" border-radius: 15px; padding: 0px 12px;">
                 <strong class="w3-text-dark-gray">Luxury</strong>
               </div>
           </div>
@@ -654,7 +644,7 @@
                 
 
                 <div class="swiper-slide w3-display-container" style="height: 370px; width: 250px; margin-right: 20px;">
-                  <img alt="shimla couple tour from chandigarh" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="imgss/mall-road-shimla.jpg">
+                  <img alt="{{ page.alt }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.imgh1 }}">
                   <div class="w3-display-bottomleft w3-padding w3-text-white" style="background-image: linear-gradient(#ffffff00, #000000); width: 218px; border-radius: 0px 0px 15px 15px; height: 250px;">
                     <b>Mall Road Shimla</b>
                     <p class="w3-tiny">Mall Road in Shimla is the heart of the city's shopping, dining, and sightseeing experience. Lined with colonial-era buildings, vibrant shops, and cozy cafes, it offers a perfect blend of history and modernity. Visitors can enjoy leisurely walks, shop for Himachali handicrafts, and savor delicious local and international cuisines. With popular attractions like Scandal Point, Kali Bari Temple, and Gaiety Theatre nearby, Mall Road is a must-visit destination for tourists seeking the true charm of Shimla.</p>
@@ -663,14 +653,14 @@
                 </div>
 
               <div class="swiper-slide w3-display-container" style="height: 370px; width: 250px; margin-right: 20px;">
-                  <img alt="shimla couple tour from chandigarh" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="imgss/jhakhoo.jpg">
+                  <img alt="{{ page.alt }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.imgh2 }}">
                   <div class="w3-display-bottomleft w3-padding w3-text-white" style="background-image: linear-gradient(#ffffff00, #000000); width: 218px; border-radius: 0px 0px 15px 15px; height: 250px;">
                     <b>Jakhoo Temple Shimla</b> 
                     <p class="w3-tiny">Jakhoo Temple in Shimla is a renowned ancient temple dedicated to Lord Hanuman, situated on the highest peak of Shimla at Jakhu Hill. It holds great mythological significance, believed to be the spot where Hanuman rested while on his mission to find the Sanjeevani herb during the Ramayana era. The temple is famous for its massive 108-feet tall Hanuman statue, one of the tallest in the world, overlooking the beautiful Shivalik ranges. Surrounded by dense deodar forests, Jakhoo Temple offers a serene spiritual experience along with panoramic views of Shimla city, making it a must-visit destination on your Shimla Manali honeymoon travel package.</p>
 
                   </div>
                 </div><div class="swiper-slide w3-display-container" style="height: 370px; width: 250px; margin-right: 20px;">
-                  <img alt="shimla couple tour from chandigarh" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="imgss/solang.jpg">
+                  <img alt="{{ page.alt }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.imgh3 }}">
                   <div class="w3-display-bottomleft w3-padding w3-text-white" style="background-image: linear-gradient(#ffffff00, #000000); width: 218px; border-radius: 0px 0px 15px 15px; height: 250px;">
                     <b>Solang Valley Manali</b>
                     <p class="w3-tiny">
@@ -679,7 +669,7 @@
                   </div>
 
                 </div><div class="swiper-slide w3-display-container" style="height: 370px; width: 250px; margin-right: 20px;">
-                  <img alt="shimla couple tour from chandigarh" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="imgss/spring.jpg">
+                  <img alt="{{ page.alt }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.imgh4 }}">
                   <div class="w3-display-bottomleft w3-padding w3-text-white" style="background-image: linear-gradient(#ffffff00, #000000); width: 218px; border-radius: 0px 0px 15px 15px; height: 250px;">
                     <b>Vashisht Hot Springs </b> 
                     <p class="w3-tiny">
@@ -688,7 +678,7 @@
                   </div>
 
                 </div><div class="swiper-slide w3-display-container" style="height: 370px; width: 250px; margin-right: 20px;">
-                  <img alt="shimla couple tour from chandigarh" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="imgss/hadimba.jpg">
+                  <img alt="{{ page.alt }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" src="{{ site.url }}/assets/images/{{ page.imgh5 }}">
                   <div class="w3-display-bottomleft w3-padding w3-text-white" style="background-image: linear-gradient(#ffffff00, #000000); width: 218px; border-radius: 0px 0px 15px 15px; height: 250px;">
                     <b>Hadimba Temple Manali</b> 
                     <p class="w3-tiny">
@@ -730,7 +720,7 @@
                   </div>
               </div>
 
-              <hr style="margin:2px 0px; border-top:2px solid #26ccc2; border-radius:30px; width:40%;">
+              <hr class="hr">
             <br>
               <div class="w3-row w3-margin-bottom w3-display-container" style="height: 250px; width: 100%;">
                 <div class="w3-row w3-display-bottomleft w3-padding w3-text-white" style="width: 100%; border-radius: 0px 0px 15px 15px; background-image: linear-gradient(#ffffff00, #000000);">
@@ -763,7 +753,7 @@
 
 <div class="w3-row w3-margin-bottom w3-stretch">
     <div class="w3-col l4 m6 s6"> <strong class="">
-      <i class="fa-solid fa-taxi w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+      <i class="fa-solid fa-taxi w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
       Transfers :</strong>
 
       <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px; margin-right: 10px;">
@@ -775,7 +765,7 @@
     </div>
 
     <div class="w3-col l4 m6 s6"> <strong class="">
-      <i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+      <i class="fa-solid fa-hotel w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Stay At :</strong>
 
       <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px;">
@@ -787,7 +777,7 @@ Stay At :</strong>
   </div>
 
                 <div class="w3-margin-top w3-row w3-stretch">
-                  <i class="fa-solid fa-utensils w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
+                  <i class="fa-solid fa-utensils w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
                     
 
                   <strong> Meal Inclusions :</strong></div>
@@ -848,7 +838,7 @@ Stay At :</strong>
 
 <div class="w3-row w3-margin-bottom w3-stretch">
   <div class="w3-col l4 m6 s6"> <strong class="">
-    <i class="fa-solid fa-taxi w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+    <i class="fa-solid fa-taxi w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
     Transfers :</strong>
 
     <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px; margin-right: 10px;">
@@ -860,7 +850,7 @@ Stay At :</strong>
   </div>
 
   <div class="w3-col l4 m6 s6"> <strong class="">
-    <i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+    <i class="fa-solid fa-hotel w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Stay At :</strong>
 
     <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px;">
@@ -872,7 +862,7 @@ Stay At :</strong>
 </div>
 
               <div class="w3-margin-top w3-row w3-stretch">
-                <i class="fa-solid fa-utensils w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
+                <i class="fa-solid fa-utensils w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
                   
 
                 <strong> Meal Inclusions :</strong></div>
@@ -941,7 +931,7 @@ Stay At :</strong>
 
 <div class="w3-row w3-margin-bottom w3-stretch">
 <div class="w3-col l4 m6 s6"> <strong class="">
-<i class="fa-solid fa-taxi w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+<i class="fa-solid fa-taxi w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Transfers :</strong>
 
 <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px; margin-right: 10px;">
@@ -953,7 +943,7 @@ Manali
 </div>
 
 <div class="w3-col l4 m6 s6"> <strong class="">
-<i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+<i class="fa-solid fa-hotel w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Stay At :</strong>
 
 <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px;">
@@ -965,7 +955,7 @@ Manali <br>
 </div>
 
     <div class="w3-margin-top w3-row w3-stretch">
-      <i class="fa-solid fa-utensils w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
+      <i class="fa-solid fa-utensils w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
         
 
       <strong> Meal Inclusions :</strong></div>
@@ -1023,7 +1013,7 @@ Manali <br>
 
 <div class="w3-row w3-margin-bottom w3-stretch">
 <div class="w3-col l4 m6 s6"> <strong class="">
-<i class="fa-solid fa-taxi w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+<i class="fa-solid fa-taxi w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Transfers :</strong>
 
 <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px; margin-right: 10px;">
@@ -1035,7 +1025,7 @@ Kasol And Manikaran to Manali
 </div>
 
 <div class="w3-col l4 m6 s6"> <strong class="">
-<i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+<i class="fa-solid fa-hotel w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
 Stay At :</strong>
 
 <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px;">
@@ -1047,7 +1037,7 @@ Manali <br>
 </div>
 
     <div class="w3-margin-top w3-row w3-stretch">
-      <i class="fa-solid fa-utensils w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
+      <i class="fa-solid fa-utensils w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
         
 
       <strong> Meal Inclusions :</strong></div>
@@ -1108,7 +1098,7 @@ Manali <br>
   
   <div class="w3-row w3-margin-bottom w3-stretch">
   <div class="w3-col l4 m6 s6"> <strong class="">
-  <i class="fa-solid fa-taxi w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+  <i class="fa-solid fa-taxi w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
   Transfers :</strong>
   
   <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px; margin-right: 10px;">
@@ -1120,7 +1110,7 @@ Manali <br>
   </div>
   
   <div class="w3-col l4 m6 s6"> <strong class="">
-  <i class="fa-solid fa-hotel w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
+  <i class="fa-solid fa-hotel w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8px; margin-right: 6px;"></i>
   Stay At :</strong>
   
   <div class="w3-row w3-margin-top w3-padding" style="border-radius: 15px; background-color: #f9f9f9; height: 160px;">
@@ -1132,7 +1122,7 @@ Manali <br>
   </div>
   
       <div class="w3-margin-top w3-row w3-stretch">
-        <i class="fa-solid fa-utensils w3-text-teal w3-sand" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
+        <i class="fa-solid fa-utensils w3-text-teal w3-light-gray" style="border-radius: 30px; padding: 8px 8.2px; margin-right: 6px;"></i>
           
   
         <strong> Meal Inclusions :</strong></div>
@@ -1170,7 +1160,7 @@ Manali <br>
           </div>
 
 
-          <hr>
+         <div class="HR"></div>
        
 
 
@@ -1178,7 +1168,7 @@ Manali <br>
         </div>
       </div>
 
-       <div class="w3-third w3-hide-small" style="object-fit: contain; padding: 6px 6px; position: sticky; top: 0;">
+       <div class="w3-third w3-hide-small" style="object-fit: contain; padding: 6px 6px; position: sticky; top: 70px;">
         <div class="w3-row w3-round w3-padding">
 
         
@@ -1190,7 +1180,7 @@ Manali <br>
                 <h2 class="w3-large"><strong>
                  Shimla - Manali Tour package by AC Volvo
                   </strong></h2>
-                  <hr style="margin:2px 0px; border-top:2px solid #26ccc2; border-radius:30px; width:40%;">
+                  <hr class="hr">
                 <p><b class="w3-xlarge">INR 10,999 <span class="w3-small w3-text-gray">Onwards</span></b>
                   <br><strike class="w3-text-gray">INR 12,999</strike>
                 </p>
@@ -1264,7 +1254,7 @@ Manali <br>
         <strong>What’s inside the package?</strong>
       </h2>
 
-      <hr>
+     <div class="HR"></div>
       <div class="w3-half">
 
         <included>
@@ -1364,7 +1354,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1427,7 +1417,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1487,7 +1477,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1547,7 +1537,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1607,7 +1597,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1667,7 +1657,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1728,7 +1718,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1788,7 +1778,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1848,7 +1838,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1908,7 +1898,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -1969,7 +1959,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -2029,7 +2019,7 @@ Manali <br>
             </a>
             <div class="w3-row" style="margin-top: 6px;">
               <div class="w3-col" style="width: 50px;">
-                <a href="tel:+919816631256"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+                <a href="tel:+919816631256"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                   <i class="fa fa-phone w3-text-teal"></i>
                 </button></a>
               </div>
@@ -2174,20 +2164,7 @@ Manali <br>
     }
   </script>
 
-  <script>
-    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 290 || document.documentElement.scrollTop > 290) {
-        document.getElementById("Fixed").style.bottom = "0px";
-
-      } else {
-        document.getElementById("Fixed").style.bottom = "-180px";
-
-      }
-    }
-  </script>
+ 
  
 </body>
 

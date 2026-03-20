@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <title>Shimla Manali Travel Packages From Delhi, Chandighar, Amritsar</title>
-  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.png">
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.ico">
   <meta name="description"
-    content="India travel packages, Himalayan treks, cultural tours, adventure tourism, personalized itineraries.">
+    content="{{ page.discription }}">
   <meta name="keywords"
-    content="Himachal Pradesh tourism, India travel packages, Shimla tour, Manali tour, Himalayan treks, cultural tours India, adventure tourism India, tailor-made travel India, experienced travel guides India, unforgettable travel experiences India">
-  <meta name="author" content="Tourist hill">
+    content="{{ page.keywords }}">
+  <meta name="author" content="Trip Quest Holidays">
  <meta name="theme-color" content="#ffffff">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -216,86 +216,92 @@
 
  
 
-<div class="w3-row-padding w3-padding-16 w3-padding">
-    <div class="w3-content">
+<div class="w3-row-padding w3-padding-16 w3-padding w3-content">
+    <div>
       <div class="w3-row w3-white">
         
-         <div class="w3-row w3-text-gray w3-margin-bottom" style="padding-bottom: 0px; overflow: hidden;
+         <div class="w3-row w3-text-gray w3-margin-bottom" >
+   <span class="w3-hover-text-teal"> <a href="https://tripquestholidays.in">
+    <div class="w3-col" style="width: 30px; padding-top: 2px; padding-right: 3px;">
+      <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#484848"></path>
+<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#FFFFFF"></path>
+</svg></div>
+<div class="w3-rest" style="padding-bottom: 0px; padding-top: 2px; overflow: hidden;
    display: -webkit-box;
    -webkit-line-clamp: 1;
            line-clamp: 1; 
    -webkit-box-orient: vertical;">
-   <span class="w3-hover-text-teal"> <a href="https://tripquestholidays.in">
-    <div class="w3-col" style="width: 20px; padding-top: 2px; padding-right: 3px;">
-      <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#FF5A5F"></path>
-<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#FFFFFF"></path>
-</svg></div>
     Home</a></span> / <span class="w3-hover-text-teal"> {{ page.title }}</span></div>
-
+</div>
         
 <div class="w3-margin-top">
-        <h1 class="w3-text-dark-gray w3-xlarge w3-margin-top"><strong>{{ page.title }}</strong></h1>
+        <h1 class="w3-text-dark-gray w3-margin-top" style="font-size: 28px;"><strong>{{ page.title }}</strong></h1>
  
-        <p class="w3-text-grey">We have the best coustomizable packages for you.</p>
-    <div class="HR"></div>
+        <p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
     
-    <div class="w3-row w3-margin-top" style=" background-image: linear-gradient(#f5f5f5, #ffffff); padding :4px 18px; border-radius: 15px;">
+    
+    <div class="w3-row w3-margin-top"  id="more">
+      <div class="w3-round-xlarge w3-padding w3-small" style="background-image: linear-gradient(#f5f5f5, #ffffff);">
        {{ content }} 
-       
+       </div>
        
 
-            <b class="w3-margin-bottom" onclick="myFunction()" id="myBtn">Read more</b>
+            
 
     </div>
-
-    </div>
-
+    <div class="w3-row w3-center">
+<b class="w3-margin-bottom w3-hover-text-teal w3-center w3-button w3-hover-white" onclick="myFunction()" id="myBtn">Continue Reading</b>
+</div>    
+</div>
+<div class="HR"></div>
 </div>
 </div>
 </div>
 
 
-<div class="w3-row"style="background-image: linear-gradient(to bottom, #ffffff,#ffffff, #f9f9f9d8); box-shadow: 0 4px 20px -12px rgba(0,0,0,0.19);
+  <!--Home Nav 2-->
+
+<div class="w3-row" style="background-image: linear-gradient(to bottom, #ffffff,#ffffff, #f9f9f9d8); box-shadow: 0 4px 20px -12px rgba(0,0,0,0.19);
   border-radius: 0px 0px 15px 15px; z-index: 40; position: -webkit-sticky;
 position: sticky;
 top:63px;">
-<div class=" w3-content" >
+<div class=" w3-content">
 
       <div style="margin:6px 2px ;">
         <!-- Swiper -->
-        <div class="swiper mySwiper w3-text-gray">
-          <div class="swiper-wrapper">
+        <div class="swiper mySwiper w3-text-gray swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <div class="swiper-wrapper" id="swiper-wrapper-10ff3b1011388dda3c" aria-live="polite">
         
-            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Shimla')">
+            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink swiper-slide-active" onclick="openCity(event,'Shimla')" role="group" aria-label="1 / 6" style="margin-right: 20px;">
               <i class="fa fa-people-roof w3-large"></i>
-              <br />
+              <br>
               <strong>Family</strong>
             </div>
-            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')">
-              <i class="fas fa-snowman w3-large"></i><br />
+            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink swiper-slide-next" onclick="openCity(event,'Manali')" role="group" aria-label="2 / 6" style="margin-right: 20px;">
+              <i class="fas fa-snowman w3-large"></i><br>
               <strong>Holiday</strong>
             </div>
-            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')">
-                <i class="fas fa-heart-circle-check w3-large"></i><br />
+            <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')" role="group" aria-label="3 / 6" style="margin-right: 20px;">
+                <i class="fas fa-heart-circle-check w3-large"></i><br>
                 <strong>Honeymoon</strong>
                 
               </div>
-              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')">
-                <i class="fas fa-people-group w3-large"></i><br />
+              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')" role="group" aria-label="4 / 6" style="margin-right: 20px;">
+                <i class="fas fa-people-group w3-large"></i><br>
                 <strong>Group</strong>
               </div>
-              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')">
-                <i class="fas fa-person-half-dress w3-large"></i><br />
+              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')" role="group" aria-label="5 / 6" style="margin-right: 20px;">
+                <i class="fas fa-person-half-dress w3-large"></i><br>
                 <strong>Executives</strong>
               </div>
 
-              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')">
+              <div class="swiper-slide slide-1 w3-button w3-hover-none w3-small w3-hover-text-teal tablink" onclick="openCity(event,'Manali')" role="group" aria-label="6 / 6" style="margin-right: 20px;">
                 
               </div>
           </div>
 
-        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
 
 
@@ -303,43 +309,57 @@ top:63px;">
 
 </div>
 </div>
-     <div><div class="HR"></div>
-     <div class="w3-container">
+     <div>
+     <div class="w3-row">
       
-        <div w3-content>
+        <div>
+
+<!--Home Layout-->
 
 
 
 
-<div class="w3-row w3-content">
-  <div class="city">
 
-    
 
-    <h2 class="w3-large w3-margin-bottom"><strong>All Shimla Travel Packages</strong></h2>
-    
-<div class="w3-row w3-row-padding" style="margin: 0px -16px;">
 
+
+
+
+ 
+
+
+  <!-- Swiper -->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray w3-margin-top">
+      <h2 class="w3-large w3-col s8 m8 l8"><strong>Goldan Triangle Tour Packages</strong></h2> <a href="{{ site.url }}/shimla-tour-packages.html"><span class="w3-right w3-right-align w3-rest w3-text-dark-gray w3-small"><strong>View All </strong><i style="padding:3px 5px; border-radius: 30px; margin-top:15px;" class="w3-teal fa-solid w3-small fa-angle-right"></i></span></a>
+    </div>
+    <br>
+
+     
+<div class="w3-margin-top">
+
+
+
+
+
+ <div class=" w3-content">
+      <div class="w3-row w3-row-padding">
   
-    
-  
-  
-  
-  
+
+
+
+{% assign current_cat = page.category %}
   {% for post in site.posts %}
-    {% if post.categories contains "Shimla" %}
+    {% if post.categories contains current_cat %}
 <!--1-->
-  <div class="w3-third w3-row w3-margin-bottom">
+ <div class="w3-third w3-row"style="margin: 4px; margin-bottom:12px;">
+
+     
    
   
-<a href="{{ post.url | relative_url }}">
-            <div class="w3-row w3-display-container" style="height: 290px; width:320px;">
-              <img class="w3-border w3-border-light-gray" alt="4N-5D Shimla Manali Tour Package For Couple From Delhi" src="{{ post.img }}" style=" border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
-<div class="w3-display-topright" style="padding: 12px;">
- <div style="background-color: #00000080; padding: 2.5px 7px; border-radius: 30px;">
-  <i style="margin-top: 6px;" class="w3-large w3-text-light-gray fa-regular fa-heart"></i>
-</div>
-</div>
+<a href="{{site.url}}{{ post.url | relative_url }}">
+            <div class="w3-row w3-display-container" style="height: 290px; width:100%;">
+              <img class="w3-border  w3-border-light-gray" alt="4N-5D Shimla Manali Tour Package For Couple From Delhi" src="{{site.url }}/assets/images/{{ post.img }}" style=" border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
+
 
 
 
@@ -360,7 +380,7 @@ top:63px;">
             font-weight: 700;
             -webkit-box-orient: vertical; font-size:18px;">{{ post.title }}</h3>
 
-<div class="w3-row w3-text-gray w3-round" style="padding: 6px 0px;  background-image: linear-gradient(#ffffff00, #f9f9f9, #ffffff00);">
+<div class="w3-row w3-small w3-text-gray w3-round" style="padding: 6px 0px;  background-image: linear-gradient(#ffffff00, #f9f9f9, #ffffff00);">
 <b><i>Destinations: </i>{{ post.destinations }}"Etc </b>
 </div>
 
@@ -374,7 +394,7 @@ top:63px;">
           </a>
           <div class="w3-row" style="margin-top: 6px;">
             <div class="w3-col" style="width: 50px;">
-              <a href="tel:+918219471645"><button class="w3-button w3-sand w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
+              <a href="tel:+918219471645"><button class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px;">
                 <i class="fa fa-phone w3-text-teal"></i>
               </button></a>
             </div>
@@ -386,16 +406,46 @@ top:63px;">
           </div>
 
 
-       </div>
+        </div>
   {% endif %}
   {% endfor %}
+      
 
     
-          </div>
+  
+                    <!--View All-->
+ 
+        
+        
 
 
-  </div>
+
+
+
+         
+
+      </div>
+
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 </div>
+    <div class="HR"></div>
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+    
+    <div class="HR"></div>
+
+
+
 
 
 
@@ -410,54 +460,36 @@ top:63px;">
     </div>
   </div>
 
+
+<!--conclusion-->
+      {% for block in page.conclusion %}
+  <section class="w3-content w3-container conclusion-section">
+    {% if block.title %}
+      <h2 class="w3-xlarge w3-text-dark-gray">{{ block.title }}</h2>
+    {% endif %}
+
+    {% for item in block.content %}
+      {% if item.p %}
+        <p class="w3-text-gray">{{ item.p }}</p>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endfor %}
+     <!--faq-->
+
      <div class="kufri-faq-container">
-  <h2 class="kufri-faq-heading">Frequently Asked Questions</h2>
-
+       {% for item in page.faq %}
+  <h2 class="kufri-faq-heading">{{ item.question }}</h2>
+  <div>
+ {% for sub in item.sub_questions %}
   <details class="kufri-faq-item">
-    <summary class="kufri-faq-question">Q. Is the Kufri horse ride safe for children?</summary>
-    <div class="kufri-faq-answer">
-     A. Yes, thousands of children enjoy the ride every year. The ponies are well-trained and accustomed to the path. For very small children, a handler will walk alongside the horse to ensure safety.
-    </div>
+    <summary class="kufri-faq-question">Q: {{ sub.q }}</summary>
+    <div class="kufri-faq-answer">A: {{ sub.a }}</div>
   </details>
-
-  <details class="kufri-faq-item">
-    <summary class="kufri-faq-question">Q. Can we walk to Mahasu Peak instead of taking a horse?</summary>
-    <div class="kufri-faq-answer">
-      A. Technically, yes, you can hike. However, the path is shared with hundreds of horses, making it extremely muddy and slushy. Walking can be difficult and messy, which is why most tourists prefer the horse ride.
-    </div>
-  </details>
-
-  <details class="kufri-faq-item">
-    <summary class="kufri-faq-question">Q. What is the best time to visit for the ride?</summary>
-    <div class="kufri-faq-answer">
-      A. The ride is open year-round! Visit in <strong>Winter (Dec-Feb)</strong> for a magical snowy experience, or <strong>Summer (April-June)</strong> for pleasant weather and clear views of the Himalayas.
-    </div>
-  </details>
+   {% endfor %}
+ </div>
+    {% endfor %}
 </div>
-
-        <div class="w3-content w3-container">
-
-
-
-
-            <h3 class="w3-large w3-text-dark-gray"><b>Tips for Planning Your Shimla Trip</b></h3>
-            <ul>
-                <li><b>Book in Advance:</b> Especially during peak season, to secure the best deals and availability.</li>
-                <li><b>Pack Accordingly:</b> Pack warm clothes if you're traveling during winter, and comfortable shoes for walking and sightseeing.</li>
-                <li><b>Carry Cash:</b> While most places accept cards, it's always advisable to carry some cash for local vendors and smaller establishments.</li>
-                <li><b>Respect Local Culture:</b> Dress modestly when visiting religious sites and be mindful of local customs.</li>
-                <li><b>Bargain Wisely:</b> Don't hesitate to bargain while shopping at local markets.</li>
-            </ul>
-            <h3 class="w3-large w3-text-dark-gray">Enjoy Your Shimla Adventure!</h3>
-            <p>With its stunning scenery, charming colonial architecture, and vibrant culture, Shimla offers an unforgettable travel experience. By choosing a well-planned travel package, you can relax, enjoy the journey, and create memories that will last a lifetime.</p>
-        
-            <p><b>Disclaimer:</b> This content is for informational purposes only and should not be considered professional travel advice.</p>
-        
-        </div>
-     
-     
-
-
   <!--about-->
 
 
@@ -512,7 +544,7 @@ top:63px;">
     
       if (dots.style.display === "none") {
         dots.style.display = "inline";
-        btnText.innerHTML = "Read more"; 
+        btnText.innerHTML = "Continue Reading"; 
         moreText.style.display = "none";
         // Scrolls to the absolute top of the page smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
