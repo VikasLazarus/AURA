@@ -6,6 +6,7 @@ date: 2023-01-01 10:00:00 +0530
 categories: [Shimla, Honeymoon]
 permalink: team/vinay-dhiman.html
 img: vinay.webp
+alt: Vikas Lazarus
 designation: HR & Sales Executive
 ---
 
