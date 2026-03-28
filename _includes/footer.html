@@ -308,3 +308,7 @@ c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-
 
 
 </div>
+
+  <script>
+    document.querySelectorAll(".slider-container").forEach(c=>{let t=c.querySelector(".slider-track"),p=c.querySelector(".prev-btn"),n=c.querySelector(".next-btn"),u=()=>{p.classList.toggle("disabled",t.scrollLeft<=1),n.classList.toggle("disabled",t.scrollLeft+t.clientWidth>=t.scrollWidth-1)};n.addEventListener("click",()=>{t.scrollBy({left:t.clientWidth,behavior:"smooth"})}),p.addEventListener("click",()=>{t.scrollBy({left:-t.clientWidth,behavior:"smooth"})}),t.addEventListener("scroll",u),window.addEventListener("resize",u),u()});
+  </script>
