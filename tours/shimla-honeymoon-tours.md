@@ -1,15 +1,15 @@
 ---
-layout: shimla
-category: Shimla
-title: "Shimla Tour Packages: Best Deals For Your Next Trip"
+layout: packages
+category: Shimla-Honeymoon
+title: "Shimla Honeymoon Tour Packages : Best Deals For Your Next Trip"
 date: 2023-01-01 10:00:00 +0530
-permalink: shimla-tour-packages.html
+permalink: shimla-honeymoon-tour-packages.html
 img: placeholder.webp
 discription: "Shimla tour packages are the best. You can plan a fun trip today. So, book your cool trip now."
 keywords: "Shimla tour packages, Shimla trips, book Shimla tour, Shimla holiday, travel to Shimla, best Shimla deals"
 first-100: "<strong>Shimla tour packages</strong> are here for you. First, <strong>Shimla tour packages</strong> give you fun times. Also, <strong>Shimla tour packages</strong> save you cash. So, you must book them now. Because they help you see nice hills. And you can play in the snow. Thus, it is a great choice. In fact, you will love it. Plus, we make it easy. Therefore, you will smile a lot. Next, you can relax. Then, you can eat good food. Besides, the air is so fresh. Hence, you will feel glad. Truly, it is a nice place. And we want to help you. So, let us plan it. Because it is a top spot. Still, you must act fast. Now, read more to find out."
 date: 2023-01-01 10:00:00 +0530
-categories: [all, Shimla]
+categories: [Shimla-Honeymoon, 4N-5D, Cab, Honeymoon, Delux]
 
 destinations: Shimla, Manali, Dharamshala, Dalhousie, Leh Ladakh, Spiti
 conclusion:
@@ -36,7 +36,7 @@ faq:
 
 ---
 
-   
+
 <h2>Why Shimla Is Great</h2>
 <p>And Shimla is a great place. Because it has cool air. So, you will feel fresh. Plus, the views are top notch. Therefore, you must come here. Next, you will see high hills. And they look so grand. Besides, the sky is so blue. Thus, it makes you smile. Indeed, it is a fun town. Also, the folks are so nice. So, you will feel safe. Then, you can walk around. Because it is clean. Hence, it is a top pick. Still, you should book early. Because it gets quite full. Now, let us plan it well.</p>
 

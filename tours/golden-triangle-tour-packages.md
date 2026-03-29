@@ -33,10 +33,6 @@ faq:
       - q: "Are flights included in standard Himachal travel packages?"
         a: "Most standard Himachal travel packages start from nearby major hubs like Delhi or Chandigarh, providing Volvo bus or private car transfers from there. Flights are typically not included in the base price but can be added as a custom inclusion by your travel agent upon request."
 
----
-
-hi there this is content test
----
 
 
 ---

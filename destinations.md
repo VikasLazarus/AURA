@@ -4,7 +4,7 @@ title: "Shimla Travel Packages"
 date: 2023-01-01 10:00:00 +0530
 categories: [Shimla, Honeymoon]
 permalink: destinations.html
-img: https://tripquestholidays.in/assets/images/2/1.jpg
+img: placeholder.webp
 price: INR 10,000
 xprice: INR 5,000
 priceper: Per Person
