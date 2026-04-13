@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.name }} | My Travel Site</title>
+</head>
+<body>
+    <a href="/">&larr; Back to all packages</a>
+    
+    <div style="max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #ddd;">
+        <h1>{{ page.name }}</h1>
+        <h2 style="color: #28a745;">${{ page.price }}</h2>
+        
+        <p><strong>Quantity Available:</strong> {{ page.qty }}</p>
+        <p><strong>Product ID:</strong> {{ page.product_id }}</p>
+
+        <div>
+            {{ content }}
+        </div>
+
+        <button style="padding: 10px 20px; background: blue; color: white;">Book This Package</button>
+    </div>
+</body>
+</html>

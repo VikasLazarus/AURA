@@ -2,7 +2,7 @@
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
     
     <div class="slider-track" style="gap: 20px; ">
-      {% assign popular_posts = site.posts | where_exp: "post", "post.categories contains 'Popular'" %}
+      {% assign popular_posts = site.products | where_exp: "post", "post.categories contains 'Popular'" %}
       {% for post in popular_posts limit: 5 %}
       
         <div class="w3-row slid" style="height: fit-content; width: 300px;">
