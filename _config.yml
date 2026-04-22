@@ -8,3 +8,5 @@ collections:
     output: true  
   team:
     output: true   
+  tour:
+    output: true   
