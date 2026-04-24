@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Redirect Form</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-container w3-padding-32" style="max-width: 600px; margin: auto;">
+  <div class="w3-card-4">
+    <div class="w3-container w3-blue">
+      <h2>Search Our Packages</h2>
+    </div>
+
+    <form id="tourRedirectForm" class="w3-container w3-padding-16">
+      
+      <p>
+        <label class="w3-text-dark-grey"><b>Search by Destination</b></label>
+        <select class="w3-select w3-border" name="destination" id="destination" onchange="resetOther('tourType')">
+          <option value="" selected>Select a destination...</option>
+          <option value="https://yourwebsite.com/shimla-tours">Shimla</option>
+          <option value="https://yourwebsite.com/kufri-tours">Kufri</option>
+          <option value="https://yourwebsite.com/chail-tours">Chail</option>
+        </select>
+      </p>
+
+      <div class="w3-center w3-text-grey w3-padding-small"><b>— OR —</b></div>
+
+      <p>
+        <label class="w3-text-dark-grey"><b>Search by Tour Type</b></label>
+        <select class="w3-select w3-border" name="tour_type" id="tourType" onchange="resetOther('destination')">
+          <option value="" selected>Select a tour type...</option>
+          <option value="https://yourwebsite.com/honeymoon-packages">Honeymoon Package</option>
+          <option value="https://yourwebsite.com/family-holidays">Family Holiday</option>
+          <option value="https://yourwebsite.com/weekend-getaways">Weekend Getaway</option>
+        </select>
+      </p>
+
+      <p>
+        <button class="w3-button w3-blue w3-block w3-margin-top" type="submit">View Packages</button>
+      </p>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  // Function to ensure only one dropdown is selected at a time
+  function resetOther(idToReset) {
+    document.getElementById(idToReset).selectedIndex = 0;
+  }
+
+  // Handle the form submission
+  document.getElementById('tourRedirectForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop normal form submission
+
+    // Get the URLs directly from the selected values
+    const destUrl = document.getElementById('destination').value;
+    const typeUrl = document.getElementById('tourType').value;
+
+    // Check which one has a URL and redirect
+    if (destUrl !== "") {
+      window.location.href = destUrl;
+    } else if (typeUrl !== "") {
+      window.location.href = typeUrl;
+    } else {
+      // If the user clicks submit without selecting anything
+      alert("Please select either a destination or a tour type to continue.");
+    }
+  });
+</script>
+
+</body>
+</html>

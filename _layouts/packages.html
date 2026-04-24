@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.ico">
+  <meta name="description"
+    content="{{ page.discription }}">
+  <meta name="keywords"
+    content="{{ page.keywords }}">
+  <meta name="author" content="Trip Quest Holidays">
+ <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "WebSite",
+    "name" : "Tourist Hill Travels",
+    "url" : "https://touristhill.in/"
+}
+</script>
+ 
+<style>
+  /* FAQ Container Styling */
+  .kufri-faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 15px;
+  }
+
+  .kufri-faq-heading {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+  }
+
+  /* The Question Box (Accordion) */
+  details.kufri-faq-item {
+    background-color: #f9f9f9;
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover Effect */
+  details.kufri-faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-color: #f2f2f2;
+  }
+
+  /* The Question Text */
+  summary.kufri-faq-question {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none; /* Hides default triangle in some browsers */
+    color: #333;
+    position: relative;
+    padding-right: 30px;
+  }
+
+  /* Custom Plus Icon */
+  summary.kufri-faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    color: #FF5A5F;
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+
+  /* Change to Minus when open */
+  details[open] summary.kufri-faq-question::after {
+    content: '-';
+  }
+
+  /* The Answer Text */
+  .kufri-faq-answer {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #555;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+</style>
+  <style>
+    .w3-round {
+      border-radius: 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+
+   
+
+    .w3-content {
+      max-width: 1100px;
+    }
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+    .slide-1 {
+      width: fit-content;
+    }
+
+    .slide-2 {
+
+
+
+      height: 530px;
+      width: 320px;
+      border-radius: 10px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+   <!--end-->
+<style>
+   .aa {
+      overflow: hidden;
+      width: 15px;
+      height: 36px;
+      transform: skewX(-20deg);
+      background-image: linear-gradient(to right, #ffffff, #ffffff00, #ffffff, #ffffff);
+      opacity: 0.3;
+      position: absolute;
+      animation-name: example;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: right;
+    }
+
+    @keyframes example {
+      0% {
+        left: 0%;
+        top: 0px;
+        opacity: 0;
+      }
+
+      25% {
+        left: 25%;
+        top: 0px;
+        opacity: 0.3;
+      }
+
+      50% {
+        left: 50%;
+        top: 0px;
+        opacity: 0.5;
+      }
+
+      75% {
+        left: 75%;
+        top: 0px;
+        opacity: 0.3;
+      }
+
+      100% {
+        left: 90%;
+        top: 0px;
+        opacity: 0;
+      }
+    }
+    #more {display: none;}
+    .HR {
+  margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    min-height: 1px;
+    min-width: 100%;
+    background: linear-gradient(270deg, hsla(0, 0%, 100%, .05) -.13%, hsla(0, 0%, 88%, .05) 0, #e0e0e0 49.17%, hsla(0, 0%, 88%, .05));
+}
+@media (max-width: 576px) {
+    .HR {
+        min-width: fit-content;
+        margin: 30px 0;
+    }
+}
+</style>
+
+
+<!-- Navbar -->
+{% include nav.html %}
+
+
+
+
+  <!-- Header -->
+
+
+
+
+ 
+
+<div class="w3-row-padding w3-padding-16 w3-padding w3-content">
+    <div>
+      <div class="w3-row w3-white">
+        
+         <div class="w3-row w3-text-gray w3-margin-bottom" >
+   <span class="w3-hover-text-teal"> <a href="https://tripquestholidays.in">
+    <div class="w3-col" style="width: 30px; padding-top: 2px; padding-right: 3px;">
+      <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#484848"></path>
+<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#FFFFFF"></path>
+</svg></div>
+<div class="w3-rest" style="padding-bottom: 0px; padding-top: 2px; overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;">
+    Home</a></span> / <span class="w3-hover-text-teal"> {{ page.title }}</span></div>
+</div>
+        
+<div class="w3-margin-top">
+        <h1 class="w3-text-dark-gray w3-margin-top" style="font-size: 28px;"><strong>{{ page.title }}</strong></h1>
+ 
+        <p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
+    
+    
+    <div class="w3-row w3-margin-top"  id="more">
+      <div class="w3-round-xlarge w3-padding w3-small" style="background-image: linear-gradient(#f5f5f5, #ffffff);">
+       {{ content }} 
+       </div>
+       
+
+            
+
+    </div>
+    <div class="w3-row w3-center">
+<b class="w3-margin-bottom w3-hover-text-teal w3-center w3-button w3-hover-white" onclick="myFunction()" id="myBtn">Continue Reading</b>
+</div>    
+</div>
+<div class="HR"></div>
+</div>
+</div>
+</div>
+
+
+  <!--Home Nav 2-->
+
+
+     <div>
+     
+<!--Home Layout-->
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
+
+
+
+ 
+  <div class="w3-large w3-content w3-padding w3-text-dark-gray w3-margin-bottom">
+    <h2 class="w3-large w3-col s8 m8 l8"><strong>Shimla Honeymoon Tour Packages</strong></h2>
+  </div>
+  <br>
+
+
+  <div class="w3-row w3-margin-top">
+
+
+
+
+
+   <div class="w3-content w3-margin-top" >
+  
+    
+    <div class="w3-row w3-row-padding" style="margin: 0px 0px;">
+
+
+
+
+{% assign current_cat = page.category %}
+        {% for post in site.posts limit: 5 %}
+        {% if post.categories contains current_cat %}
+        <!--1-->
+       <div class="w3-third" style="margin-bottom:30px ;">
+          <a class="w3-row w3-margin-bottom" style="text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}">
+              <div class="w3-row w3-display-container" style="height: 290px; width:100%;">
+                <img class="w3-border w3-border-light-gray" alt="{{ post.title }}" src="{{ site.url }}/assets/images/{{ post.img }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
+              </div>
+  
+              <div class="w3-row">
+                <div class="w3-row w3-margin-top">
+                  <div class="w3-left w3-text-gray"><b>
+                  <svg width="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#484848" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                    {{ post.duration }}</b></div>
+                  <div class="w3-right w3-text-gray"></div>
+                </div>
+                
+                <h3 class="w3-text-dark-gray" style="font-size: 20px; margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 700; -webkit-box-orient: vertical; font-size:18px;">
+                  {{ post.title }}
+                </h3>
+  
+                <div class="w3-row w3-small w3-text-gray w3-round" style="padding: 6px 0px; background-image: linear-gradient(#ffffff00, #f9f9f9, #ffffff00);">
+                  <b><i>Destinations: </i>{{ post.destinations }} Etc.</b>
+                </div>
+  
+                <b class="w3-xlarge" style="margin-top: 0px;">{{ post.price }} <span class="w3-small w3-text-gray">{{ post.priceper }}</span> </b>
+                <br><strike class="w3-text-gray">{{ post.xprice }}</strike>  
+              </div> 
+          </a>
+          
+          <div class="w3-row w3-margin-top">
+              <div class="w3-col" style="width: 50px;">
+                <a href="tel:+918219471645" aria-label="Call Now To Enquire" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+                  <svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
+                </a>
+              </div>
+              <div class="w3-rest">
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+                  Request Callback
+                </button>
+              </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+
+
+        <!--View All-->
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+     
+    </div>
+  </div>
+
+  <!-- Swiper -->
+  
+
+        <!--View All-->
+
+
+
+
+
+
+
+
+
+
+  <div class="HR"></div>
+
+
+
+
+
+
+
+
+<!--conclusion-->
+      {% for block in page.conclusion %}
+  <section class="w3-content w3-container conclusion-section">
+    {% if block.title %}
+      <h2 class="w3-xlarge w3-text-dark-gray">{{ block.title }}</h2>
+    {% endif %}
+
+    {% for item in block.content %}
+      {% if item.p %}
+        <p class="w3-text-gray">{{ item.p }}</p>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endfor %}
+     <!--faq-->
+
+     <div class="kufri-faq-container">
+       {% for item in page.faq %}
+  <h2 class="kufri-faq-heading">{{ item.question }}</h2>
+  <div>
+ {% for sub in item.sub_questions %}
+  <details class="kufri-faq-item">
+    <summary class="kufri-faq-question">Q: {{ sub.q }}</summary>
+    <div class="kufri-faq-answer">A: {{ sub.a }}</div>
+  </details>
+   {% endfor %}
+ </div>
+    {% endfor %}
+</div>
+  <!--about-->
+
+
+ 
+  
+
+   <!-- Footer -->
+  
+{% include footer.html %}
+  <!-- Swiper JS -->
+  
+
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+<script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Continue Reading"; 
+        moreText.style.display = "none";
+        // Scrolls to the absolute top of the page smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+        
+      }
+    }
+    </script>
+    </body>
+    </html>
