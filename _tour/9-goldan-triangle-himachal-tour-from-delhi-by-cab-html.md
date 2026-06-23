@@ -1,0 +1,38 @@
+---
+layout: post
+tour_id: 9
+user_id: 1
+title: "Goldan Triangle Himachal Tour From Delhi By Cab "
+description: "none"
+keywords: "none"
+permalink: "goldan-triangle-himachal-tour-from-delhi-by-cab.html"
+category: "Goldan Triangle"
+categories: "Solo, Popular"
+destinations: "Amritsar Shimla Manali"
+from_location: "Delhi"
+route: "Delhi Amritsar Shimla Manali Delhi"
+tour_by: "Cab"
+price_currency: "INR"
+price: "55,000.00"
+price_x: "58,000.00"
+price_per: "Per Person"
+duration: "7 Nights 8 Days"
+duration_short: "7N 8D"
+created_at: "2026-06-18 05:31:47"
+img1: "placeholder.webp"
+imgh1: ""
+img2: "placeholder.webp"
+imgh2: ""
+img3: "placeholder.webp"
+imgh3: ""
+img4: "placeholder.webp"
+imgh4: ""
+img5: "placeholder.webp"
+imgh5: ""
+p1: "none"
+p2: "none"
+p3: "none"
+p4: "none"
+itinerary: "[]"
+---
+

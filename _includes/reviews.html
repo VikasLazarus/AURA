@@ -1,0 +1,134 @@
+{% comment %} --- LIQUID MATH & LOGIC (NO JAVASCRIPT) --- {% endcomment %}
+{% assign total_reviews = site.data.reviews.size %}
+{% assign sum_ratings = 0 %}
+{% assign count_5 = 0 %}
+{% assign count_4 = 0 %}
+{% assign count_3 = 0 %}
+{% assign count_2 = 0 %}
+{% assign count_1 = 0 %}
+
+{% for review in site.data.reviews %}
+  {% assign sum_ratings = sum_ratings | plus: review.rating %}
+  {% if review.rating == 5 %}{% assign count_5 = count_5 | plus: 1 %}{% endif %}
+  {% if review.rating == 4 %}{% assign count_4 = count_4 | plus: 1 %}{% endif %}
+  {% if review.rating == 3 %}{% assign count_3 = count_3 | plus: 1 %}{% endif %}
+  {% if review.rating == 2 %}{% assign count_2 = count_2 | plus: 1 %}{% endif %}
+  {% if review.rating == 1 %}{% assign count_1 = count_1 | plus: 1 %}{% endif %}
+{% endfor %}
+
+{% if total_reviews > 0 %}
+  {% comment %} Workaround for Liquid's lack of decimal math {% endcomment %}
+  {% assign sum_times_10 = sum_ratings | times: 10 %}
+  {% assign avg_times_10 = sum_times_10 | divided_by: total_reviews %}
+  {% assign avg_whole = avg_times_10 | divided_by: 10 %}
+  {% assign avg_decimal = avg_times_10 | modulo: 10 %}
+  {% capture average_rating %}{{ avg_whole }}.{{ avg_decimal }}{% endcapture %}
+  
+  {% assign rounded_avg = avg_whole %}
+  {% if avg_decimal >= 5 %}{% assign rounded_avg = rounded_avg | plus: 1 %}{% endif %}
+
+  {% assign pct_5 = count_5 | times: 100 | divided_by: total_reviews %}
+  {% assign pct_4 = count_4 | times: 100 | divided_by: total_reviews %}
+  {% assign pct_3 = count_3 | times: 100 | divided_by: total_reviews %}
+  {% assign pct_2 = count_2 | times: 100 | divided_by: total_reviews %}
+  {% assign pct_1 = count_1 | times: 100 | divided_by: total_reviews %}
+{% else %}
+  {% assign average_rating = "0.0" %}
+  {% assign rounded_avg = 0 %}
+  {% assign pct_5 = 0 %}{% assign pct_4 = 0 %}{% assign pct_3 = 0 %}{% assign pct_2 = 0 %}{% assign pct_1 = 0 %}
+{% endif %}
+{% comment %} --- END LOGIC --- {% endcomment %}
+
+<style>
+  .Rh {
+    height:180px;
+  }
+  @media only screen and (max-width: 600px) {
+  .Rh {
+    height: 200px;
+  }
+}
+</style>
+
+<div class="w3-row w3-content w3-padding">
+  <div class="w3-row w3-large w3-text-dark-gray" style="margin-bottom: 12px;">
+    <div class="w3-center w3-margin-bottom">
+      <h2 class="w3-text-dark-gray"><strong>Rating & Reviews</strong></h2>
+    </div> 
+  </div>
+
+  <div class="w3-row w3-margin-top">
+    <div class="w3-col s12 m2 l2">
+      <div class="w3-col s4 m12 l12">
+        <p style="margin: 0px; margin-top: -10px; font-size: 50px;"><strong id="overall-rating-score" class="w3-text-dark-gray">{{ average_rating }}</strong></p>
+      </div>
+      <div class="w3-col s8 m12 l12">
+        <div id="overall-rating-stars" class="w3-row w3-text-green" style="font-size: 1.2em; letter-spacing: 2px;">
+            {% if rounded_avg == 5 %}★★★★★
+            {% elsif rounded_avg == 4 %}★★★★☆
+            {% elsif rounded_avg == 3 %}★★★☆☆
+            {% elsif rounded_avg == 2 %}★★☆☆☆
+            {% elsif rounded_avg == 1 %}★☆☆☆☆
+            {% else %}☆☆☆☆☆{% endif %}
+        </div>
+        <p id="total-rating-count" class="w3-text-gray" style="margin: 0px; margin-top: 6px;">{{ total_reviews }} Reviews</p>
+      </div>
+    </div>
+    <div class="w3-col s12 w3-hide-medium w3-hide-large" style="height:18px;"></div>
+    <div class="w3-col s12 m9">
+      <div class="w3-col s7 m8 l8">
+        <div class="w3-light-grey w3-round-xxlarge" style="margin-top:2px; margin-bottom: 22px;">
+          <div id="bar-5" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_5 }}%"></div>
+        </div>
+        <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
+          <div id="bar-4" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_4 }}%"></div>
+        </div>
+        <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
+          <div id="bar-3" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_3 }}%"></div>
+        </div>
+        <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
+          <div id="bar-2" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_2 }}%"></div>
+        </div>
+        <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
+          <div id="bar-1" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_1 }}%"></div>
+        </div>
+      </div>
+
+      <div class="w3-col s5 m4 l4 w3-center" style="padding: 0px 16px;">
+        <p class="w3-small" style="margin-top: -2px;"><strong>5.0</strong><span id="count-5" class="w3-text-gray"> {{ count_5 }} Reviews</span></p>
+        <p class="w3-small" style="margin-top: -2px;"><strong>4.0</strong><span id="count-4" class="w3-text-gray"> {{ count_4 }} Reviews</span></p>
+        <p class="w3-small"><strong>3.0</strong><span id="count-3" class="w3-text-gray"> {{ count_3 }} Reviews</span></p>
+        <p class="w3-small"><strong>2.0</strong><span id="count-2" class="w3-text-gray"> {{ count_2 }} Reviews</span></p>
+        <p class="w3-small"><strong>1.0</strong><span id="count-1" class="w3-text-gray"> {{ count_1 }} Reviews</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="reviews-container" class="w3-row w3-content w3-row-padding w3-margin-top">
+  {% if total_reviews == 0 %}
+    <p class="w3-center w3-text-gray">No reviews yet.</p>
+  {% else %}
+    {% for review in site.data.reviews %}
+      <div class="w3-col s12 m6 l4 w3-margin-bottom">
+        <div class="w3-round-large w3-white Rh" style="overflow: hidden;">
+            
+            <p style="margin-bottom: 2px;">{{ review.name }}</p>
+            <div class="w3-text-green" style="margin-bottom: 8px; font-size: 1.2em; letter-spacing: 2px;">
+              {% if review.rating == 5 %}★★★★★
+              {% elsif review.rating == 4 %}★★★★☆
+              {% elsif review.rating == 3 %}★★★☆☆
+              {% elsif review.rating == 2 %}★★☆☆☆
+              {% elsif review.rating == 1 %}★☆☆☆☆
+              {% else %}☆☆☆☆☆{% endif %}
+            </div>
+            <p class="w3-small" style="margin-top: 5px; color: #555; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                {{ review.content }}
+            </p>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

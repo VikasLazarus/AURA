@@ -1,0 +1,57 @@
+[
+  {
+    "author": "Vikas Lazarus",
+    "date": "4 months ago",
+    "rating": 5,
+    "text": "Booking our summer getaway with Trip Quest Holidays was the best decision we made! From our initial inquiry to the day we returned home, the entire process was completely stress-free. The team took the time to understand exactly what our family wanted and crafted a bespoke itinerary that kept both the kids and adults entertained. The hotel recommendations were spot-on, and all our transfers were seamless. We will definitely be booking our next adventure with them!",
+    "avatar": "/assets/images/user.webp",
+    "images": [],
+    "tags": ["shimla", "tour", "honeymoon"]
+  },
+  {
+    "author": "Rahul Sharma",
+    "date": "1 month ago",
+    "rating": 4,
+    "text": "Trip Quest Holidays organized our honeymoon to Bali, and it was absolutely magical. What impressed us most was their incredible attention to detail and outstanding customer service. Every excursion was perfectly timed, and we were even treated to surprise upgrades along the way! When we wanted to make a last-minute change to our schedule, their support team handled it instantly without any hassle. A true 5-star experience from start to finish.",
+    "avatar": "/assets/images/user.webp",
+    "images": [],
+    "tags": ["kufri", "accommodation","shimla"]
+  },
+   {
+    "author": "Rahul Sharma 22",
+    "date": "1 month ago",
+    "rating": 4,
+    "text": "I’ve used many travel agencies over the years, but Trip Quest Holidays easily stands out from the rest. They helped me plan a two-week cultural tour, and the execution was flawless. The local guides they partnered with were incredibly knowledgeable, the drivers were professional, and the accommodations were top-notch. They managed to pack so much into the itinerary while still giving me plenty of time to relax. Highly recommend them for a well-curated, premium holiday!",
+    "avatar": "/assets/images/user.webp",
+    "images": [],
+    "tags": ["kufri", "accommodation","shimla"]
+  },
+  {
+    "author": "Aditi Singh",
+    "date": "2 weeks ago",
+    "rating": 5,
+    "text": "As a solo female traveler, safety and smooth logistics are my absolute top priorities. Trip Quest Holidays exceeded all my expectations! They planned an amazing 10-day trip to Europe for me. Everything from the flight connections to the daily tours was organized perfectly. I felt incredibly supported knowing their 24/7 team was just a quick message away. Thank you for giving me the peace of mind to just relax and enjoy my trip",
+    "avatar": "/assets/images/user.webp",
+    "images": [],
+    "tags": ["shimla", "transport"]
+  },
+    {
+    "author": "Aditi Singh",
+    "date": "2 weeks ago",
+    "rating": 4,
+    "text": "This is my third time booking with Trip Quest Holidays, and they never disappoint. Their agents are absolute professionals who consistently go above and beyond to find the best flight deals and premium accommodations within my budget. They really take the guesswork and stress out of traveling. Whether it's a quick weekend getaway or a long international expedition, Trip Quest Holidays is my go-to travel partner. Five stars all the way",
+    "avatar": "/assets/images/user.webp",
+    "images": [],
+    "tags": ["shimla", "transport"]
+  },
+      {
+    "author": "Aditi Singh",
+    "date": "2 weeks ago",
+    "rating": 5,
+    "text": "Absolutely fantastic trip! The transportation was on time.",
+    "avatar": "/assets/images/user.webp",
+    "images": ["/assets/images/placeholder.webp",
+  "/assets/images/placeholder.webp"],
+    "tags": ["shimla", "transport"]
+  }
+]

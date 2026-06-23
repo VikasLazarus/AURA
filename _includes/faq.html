@@ -1,0 +1,45 @@
+<style>
+    details { background-color: #f9f9f9; margin-bottom: 8px; border-radius: 15px; overflow: hidden; }
+    summary { padding: 16px; font-weight: bold; cursor: pointer; background-color: #f6f6f6; transition: 0.2s ease; list-style: none; position: relative; }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { background-color: #f1f1f1; }
+    summary::after { content: '+'; position: absolute; right: 16px; font-size: 1.2em; color: #FD8D01; }
+    details[open] summary::after { content: '-'; }
+    details p { padding: 16px; margin: 0; background-color: #f9f9f9; border-top: 1px solid #ffffff; color: #555; }
+  </style>
+  
+  {% assign has_faqs = false %}
+  
+  {% comment %} 
+    Loop through all FAQs. If the page's exact destination string contains the FAQ's exact destination, build the HTML.
+  {% endcomment %}
+  {% capture faq_items %}
+    {% for faq in site.data.faqs %}
+      
+      {% if page.category contains faq.destination %}
+        {% assign has_faqs = true %}
+        <details>
+          <summary class="w3-text-dark-gray">Q. {{ faq.question }}</summary>
+          <p>A. {{ faq.answer }}</p>
+        </details>
+      {% endif %}
+      
+    {% endfor %}
+  {% endcapture %}
+  
+  {% comment %} 
+    Only render the visual container if at least one FAQ was matched.
+  {% endcomment %}
+  {% if has_faqs == true %}
+  <div class="w3-row w3-content w3-padding" style="max-width: 800px; margin-top: 40px; margin-bottom: 40px;">
+    
+    <div class="w3-center w3-margin-bottom">
+      <h2 class="w3-text-dark-gray"><strong>Frequently Asked Questions</strong></h2>
+    </div>
+  
+    <div class="w3-margin-top">
+      {{ faq_items }}
+    </div>
+  
+  </div>
+  {% endif %}
