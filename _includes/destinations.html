@@ -20,33 +20,33 @@
     
     <div class="slider-track" style="gap: 20px; ">
 
-    <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class="slide w3-hover-teal w3-round-xxlarge w3-small w3-button tablinks -active w3-teal" onclick="openCity(event, 'shimla')" id="defaultOpen" role="group" aria-label="1 / 6">
+    <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class="slide w3-hover-teal w3-small w3-button tablinks -active w3-teal" onclick="openCity(event, 'shimla')" id="defaultOpen" role="group" aria-label="1 / 6">
             
       Shimla
     </div>
   
-     <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class=" slide w3-hover-teal w3-round-xxlarge w3-button w3-small tablinks -next" onclick="openCity(event, 'manali')" role="group" aria-label="2 / 6">
+     <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class=" slide w3-hover-teal w3-button w3-small tablinks -next" onclick="openCity(event, 'manali')" role="group" aria-label="2 / 6">
             
       Manali
     </div>
 
 
-     <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class="  slide w3-hover-teal w3-round-xxlarge w3-button w3-small  tablinks" onclick="openCity(event, 'dharamshala')" role="group" aria-label="3 / 6">
+     <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class="  slide w3-hover-teal w3-button w3-small  tablinks" onclick="openCity(event, 'dharamshala')" role="group" aria-label="3 / 6">
             
       Dharamshala
     </div>
   
-  <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class="  slide w3-hover-teal w3-round-xxlarge w3-button w3-small  tablinks" onclick="openCity(event, 'dalhousie')" role="group" aria-label="4 / 6">
+  <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class="  slide w3-hover-teal w3-button w3-small  tablinks" onclick="openCity(event, 'dalhousie')" role="group" aria-label="4 / 6">
             
       Dalhousie
     </div>
             
-      <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class="  slide w3-hover-teal w3-round-xxlarge w3-button w3-small  tablinks" onclick="openCity(event, 'leh')" role="group" aria-label="5 / 6">
+      <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class="  slide w3-hover-teal w3-button w3-small  tablinks" onclick="openCity(event, 'leh')" role="group" aria-label="5 / 6">
             
       Leh Ladakh
     </div>
 
-               <div style="padding: 6px 22px; background-color: rgb(245, 245, 245);" class="  slide w3-hover-teal w3-round-xxlarge w3-button w3-small  tablinks" onclick="openCity(event, 'spiti')" role="group" aria-label="6 / 6">
+               <div style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; "  class="  slide w3-hover-teal w3-button w3-small  tablinks" onclick="openCity(event, 'spiti')" role="group" aria-label="6 / 6">
             
       Spiti Vailly
     </div>
@@ -81,8 +81,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Shimla</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
       
 <!--1-->
 {% assign filtered_items = site.destinations | where: "destination", "Shimla" %}
@@ -149,8 +150,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Manali</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
       
 
   {% assign filtered_items = site.destinations | where: "destination", "Manali" %}
@@ -211,8 +213,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Dharamshala</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
      
  
 {% assign filtered_items = site.destinations | where: "destination", "Dharamshala" %}
@@ -268,8 +271,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Dalhousie</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
      
 
  {% assign filtered_items = site.destinations | where: "destination", "Dalhousie" %}
@@ -325,8 +329,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Leh Ladakh</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
      
 
   
@@ -382,8 +387,9 @@
 
 <div class="slider-container w3-content" style="--slide-width: 200px;">
     <button class="slider-btn prev-btn" aria-label="Previous">‹</button>
+    <h3 class="w3-small" style="font-weight: 700;">Destinations At : Spiti Vailly</h3>
     
-    <div class="slider-track" style="gap: 20px; ">
+    <div class="slider-track w3-margin-top" style="gap: 20px; ">
         
 
 {% assign filtered_items = site.destinations | where: "destination", "Spiti" %}
