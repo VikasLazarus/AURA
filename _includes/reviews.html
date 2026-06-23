@@ -1,4 +1,4 @@
-{% comment %} --- LIQUID MATH & LOGIC (NO JAVASCRIPT) --- {% endcomment %}
+{% comment %} --- LIQUID MATH & LOGIC (UNCHANGED) --- {% endcomment %}
 {% assign total_reviews = site.data.reviews.size %}
 {% assign sum_ratings = 0 %}
 {% assign count_5 = 0 %}
@@ -17,7 +17,6 @@
 {% endfor %}
 
 {% if total_reviews > 0 %}
-  {% comment %} Workaround for Liquid's lack of decimal math {% endcomment %}
   {% assign sum_times_10 = sum_ratings | times: 10 %}
   {% assign avg_times_10 = sum_times_10 | divided_by: total_reviews %}
   {% assign avg_whole = avg_times_10 | divided_by: 10 %}
@@ -37,60 +36,67 @@
   {% assign rounded_avg = 0 %}
   {% assign pct_5 = 0 %}{% assign pct_4 = 0 %}{% assign pct_3 = 0 %}{% assign pct_2 = 0 %}{% assign pct_1 = 0 %}
 {% endif %}
-{% comment %} --- END LOGIC --- {% endcomment %}
 
 <style>
   .Rh {
     height:180px;
   }
   @media only screen and (max-width: 600px) {
-  .Rh {
-    height: 200px;
+    .Rh {
+      height: 200px;
+    }
   }
-}
 </style>
 
-<div class="w3-row w3-content w3-padding">
+<!-- Replaced wrapper div with a semantic <section> linked to its header -->
+<section class="w3-row w3-content w3-padding" aria-labelledby="reviews-heading">
   <div class="w3-row w3-large w3-text-dark-gray" style="margin-bottom: 12px;">
     <div class="w3-center w3-margin-bottom">
-      <h2 class="w3-text-dark-gray"><strong>Rating & Reviews</strong></h2>
+      <h2 id="reviews-heading" class="w3-text-dark-gray"><strong>Rating & Reviews</strong></h2>
     </div> 
   </div>
 
   <div class="w3-row w3-margin-top">
     <div class="w3-col s12 m2 l2">
       <div class="w3-col s4 m12 l12">
-        <p style="margin: 0px; margin-top: -10px; font-size: 50px;"><strong id="overall-rating-score" class="w3-text-dark-gray">{{ average_rating }}</strong></p>
+        <p style="margin: 0px; margin-top: -10px; font-size: 50px;">
+          <strong id="overall-rating-score" class="w3-text-dark-gray">{{ average_rating }}</strong>
+        </p>
       </div>
       <div class="w3-col s8 m12 l12">
-        <div id="overall-rating-stars" class="w3-row w3-text-green" style="font-size: 1.2em; letter-spacing: 2px;">
+        <!-- Added explicit aria-label so screen readers do not read out characters as literal black stars -->
+        <div id="overall-rating-stars" class="w3-row w3-text-green" style="font-size: 1.2em; letter-spacing: 2px;" aria-label="Rated {{ average_rating }} out of 5 stars">
+          <span aria-hidden="true">
             {% if rounded_avg == 5 %}★★★★★
             {% elsif rounded_avg == 4 %}★★★★☆
             {% elsif rounded_avg == 3 %}★★★☆☆
             {% elsif rounded_avg == 2 %}★★☆☆☆
             {% elsif rounded_avg == 1 %}★☆☆☆☆
             {% else %}☆☆☆☆☆{% endif %}
+          </span>
         </div>
         <p id="total-rating-count" class="w3-text-gray" style="margin: 0px; margin-top: 6px;">{{ total_reviews }} Reviews</p>
       </div>
     </div>
     <div class="w3-col s12 w3-hide-medium w3-hide-large" style="height:18px;"></div>
+    
     <div class="w3-col s12 m9">
       <div class="w3-col s7 m8 l8">
+        <!-- Upgraded raw colored bars to accessible progressbars for screen readers and AI agents -->
         <div class="w3-light-grey w3-round-xxlarge" style="margin-top:2px; margin-bottom: 22px;">
-          <div id="bar-5" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_5 }}%"></div>
+          <div id="bar-5" class="w3-green" role="progressbar" aria-valuenow="{{ pct_5 }}" aria-valuemin="0" aria-valuemax="100" aria-label="5 star reviews percentage" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_5 }}%"></div>
         </div>
         <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
-          <div id="bar-4" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_4 }}%"></div>
+          <div id="bar-4" class="w3-green" role="progressbar" aria-valuenow="{{ pct_4 }}" aria-valuemin="0" aria-valuemax="100" aria-label="4 star reviews percentage" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_4 }}%"></div>
         </div>
         <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
-          <div id="bar-3" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_3 }}%"></div>
+          <div id="bar-3" class="w3-green" role="progressbar" aria-valuenow="{{ pct_3 }}" aria-valuemin="0" aria-valuemax="100" aria-label="3 star reviews percentage" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_3 }}%"></div>
         </div>
         <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
-          <div id="bar-2" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_2 }}%"></div>
+          <div id="bar-2" class="w3-green" role="progressbar" aria-valuenow="{{ pct_2 }}" aria-valuemin="0" aria-valuemax="100" aria-label="2 star reviews percentage" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_2 }}%"></div>
         </div>
         <div class="w3-light-grey w3-round-xxlarge" style="margin-bottom: 22px;">
-          <div id="bar-1" class="w3-green" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_1 }}%"></div>
+          <div id="bar-1" class="w3-green" role="progressbar" aria-valuenow="{{ pct_1 }}" aria-valuemin="0" aria-valuemax="100" aria-label="1 star reviews percentage" style="border-radius: 30px 0px 0px 30px; height:8px; width:{{ pct_1 }}%"></div>
         </div>
       </div>
 
@@ -103,32 +109,72 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-
-
+<!-- Itemized Reviews Feed Block -->
 <div id="reviews-container" class="w3-row w3-content w3-row-padding w3-margin-top">
   {% if total_reviews == 0 %}
     <p class="w3-center w3-text-gray">No reviews yet.</p>
   {% else %}
     {% for review in site.data.reviews %}
       <div class="w3-col s12 m6 l4 w3-margin-bottom">
-        <div class="w3-round-large w3-white Rh" style="overflow: hidden;">
-            
-            <p style="margin-bottom: 2px;">{{ review.name }}</p>
-            <div class="w3-text-green" style="margin-bottom: 8px; font-size: 1.2em; letter-spacing: 2px;">
-              {% if review.rating == 5 %}★★★★★
-              {% elsif review.rating == 4 %}★★★★☆
-              {% elsif review.rating == 3 %}★★★☆☆
-              {% elsif review.rating == 2 %}★★☆☆☆
-              {% elsif review.rating == 1 %}★☆☆☆☆
-              {% else %}☆☆☆☆☆{% endif %}
+        <!-- Changed to semantic <article> for individual reviews inside the stream -->
+        <article class="w3-round-large w3-white Rh" style="overflow: hidden;">
+            <p style="margin-bottom: 2px;"><strong>{{ review.name }}</strong></p>
+            <div class="w3-text-green" style="margin-bottom: 8px; font-size: 1.2em; letter-spacing: 2px;" aria-label="Rating: {{ review.rating }} out of 5 stars">
+              <span aria-hidden="true">
+                {% if review.rating == 5 %}★★★★★
+                {% elsif review.rating == 4 %}★★★★☆
+                {% elsif review.rating == 3 %}★★★☆☆
+                {% elsif review.rating == 2 %}★★☆☆☆
+                {% elsif review.rating == 1 %}★☆☆☆☆
+                {% else %}☆☆☆☆☆{% endif %}
+              </span>
             </div>
             <p class="w3-small" style="margin-top: 5px; color: #555; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
                 {{ review.content }}
             </p>
-        </div>
+        </article>
       </div>
     {% endfor %}
   {% endif %}
 </div>
+
+<!-- ==========================================
+     JSON-LD STRUCTURED DATA FOR AI AGENTS
+     ========================================== -->
+{% if total_reviews > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ average_rating }}",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "{{ total_reviews }}"
+  },
+  "review": [
+    {% for review in site.data.reviews %}
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "{{ review.name | escape }}"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ review.rating }}",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "{{ review.content | escape }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
