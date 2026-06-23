@@ -1284,11 +1284,12 @@
 
   <!--reviews-->
  {% include reviews.html %}
-
+<!--faq-->
+{% include faq.html %}
   <!--our Team-->
   <div class="w3-row">
     <div class="w3-content w3-padding">
-      <h3 class="w3-large"><b>Our Team</b></h3>
+      <h3 class="w3-large w3-margin-bottom"><b>Our Team</b></h3>
 
       <div class="w3-row slider-container w3-content">
         <button class="slider-btn prev-btn w3-hide" aria-label="Previous">‹</button>
@@ -1297,42 +1298,42 @@
 
           {% assign filtered_items = site.team %}
           {% for post in filtered_items limit:5 %}
-          <div class="slid" style="height: 260px; width: 120px;">
+          <div class="slid" style="height: 260px; width: 100px;">
 
-            <div class="w3-row" style="height: 120px; width: 120px;">
+            <div class="w3-row" style="height: 100px; width: 100px;">
               <img alt="{{ page.alt }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-circle "
-                style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); object-fit:cover; overflow:hidden; width:100%; height:100%;">
+                style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
             </div>
-            <br>
+          
 
 
             <div class="w3-row">
-              <div class="w3-row w3-margin-top">
-                <div class="w3-text-dark-gray w3-center"><b>{{ post.name}} </b></div>
+              <div class="w3-row">
+                <div class="w3-text-dark-gray w3-center w3-small w3-margin-top">{{ post.name}}</div>
 
               </div>
-              <p class="w3-text-teal w3-small w3-center" style="margin-top: 3px;">{{ post.designation }}</p>
+              <p class="w3-text-teal w3-tiny w3-center" style="margin-top: 3px;">{{ post.designation }}</p>
             </div>
 
           </div>
 
           {% endfor %}
           <!--5-->
-          <div class="slid" style="height: 260px; width: 120px;">
+          <div class="slid" style="height: 260px; width: 100px;">
 
-            <div class="w3-row" style="height: 120px; width: 120px;">
+            <div class="w3-row" style="height: 100px; width: 100px;">
               <img alt="Team User Image" src="{{site.url}}/assets/images/user.webp" class="w3-circle "
-                style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); object-fit:cover; overflow:hidden; width:100%; height:100%;">
+                style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
             </div>
 
 
 
             <div class="w3-row">
-              <div class="w3-row w3-margin-top">
-                <div class="w3-text-dark-gray w3-center"><b>See Yourself Here </b></div>
+              <div class="w3-row">
+                <div class="w3-text-dark-gray w3-center w3-small w3-margin-top">See Yourself Here</div>
 
               </div>
-              <p class="w3-text-teal w3-small w3-center" style="margin-top: 3px;">Apply Now</p>
+              <p class="w3-text-teal w3-tiny w3-center" style="margin-top: 3px;">Apply Now</p>
             </div>
 
           </div>
@@ -1347,8 +1348,7 @@
 
     </div>
   </div>
-<!--faq-->
-{% include faq.html %}
+
   
   <!--Footer-->
   {% include about.html %}
