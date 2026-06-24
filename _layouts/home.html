@@ -160,23 +160,34 @@
     {% include destinations.html %}
 
     <div class="HR"></div>
+    <!--Goldan Triangle Tours-->
+    <div class="w3-large w3-content w3-padding w3-text-dark-gray">
+      <div class="w3-col w3-right" style="width: 90px;">
+        <a  href="/golden-triangle-tour-packages.html" aria-label="View all Golden Triangle tour packages">
+          <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+           
+            <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+              <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+              </svg>
+</div>
+            </div>
+            <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+          </div>
+        </a>
+      </div>
+      <div class="w3-rest">
+      <h2 class="w3-large">
+        <strong>Golden Triangle Tour Packages</strong>
+      </h2>
+    </div> 
     
-    <div class="w3-large w3-content w3-padding w3-text-dark-gray w3-margin-bottom">
-      <h2 class="w3-large w3-col s8 m8 l8"><strong>Golden Triangle Tour Packages</strong></h2> 
-      <a href="/golden-triangle-tour-packages.html" aria-label="View all Golden Triangle tour packages">
-        <span class="w3-right w3-right-align w3-rest w3-text-dark-gray w3-small">
-          <strong>View All </strong>
-          <i style="padding:1px 4px; border-radius: 60px; margin-top:15px;" class="w3-teal">
-            <svg aria-hidden="true" width="8px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-              <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
-            </svg>
-          </i>
-        </span>
-      </a>
     </div>
     <br>
 
-    <div class="w3-margin-top">
+    <div class="w3-row">
       <div class="slider-container w3-padding w3-content">
         <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
         <div class="slider-track" style="gap: 20px;">
@@ -240,6 +251,548 @@
     
     <div class="HR"></div>
     
+<!--Shimla Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/shimla-tour-packages.html" aria-label="View all Shimla tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>Shimla Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Shimla" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/shimla-tour-packages.html" aria-label="View all Shimla related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All Shimla Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+<!--manali Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/manali-tour-packages.html" aria-label="View all MAnali tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>Manali Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Manali" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/manali-tour-packages.html" aria-label="View all Manali related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All Manali Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+<!--Dharamshala Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/dharamshala-tour-packages.html" aria-label="View all Dharamshala tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>Dharamshala Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Dharamshala" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/dharamshala-tour-packages.html" aria-label="View all Dharamshala related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All Dharamshala Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+<!--Dalhousie Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/dalhousie-tour-packages.html" aria-label="View all Dalhousie tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>Dalhousie Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Dalhousie" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/dalhousie-tour-packages.html" aria-label="View all Dalhousie related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All Dalhousie Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+<!--Leh Ladakh Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/leh-ladakh-tour-packages.html" aria-label="View all Dalhousie tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>leh Ladakh Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Leh Ladakh" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/leh-ladakh-tour-packages.html" aria-label="View all Leh Ladakh related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All Leh Ladakh Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+<!--Spiti Tours-->
+<div class="w3-large w3-content w3-padding w3-text-dark-gray">
+  <div class="w3-col w3-right" style="width: 90px;">
+    <a  href="/spiti-tour-packages.html" aria-label="View all Spiti tour packages">
+      <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+       
+        <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+          <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+          <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+          </svg>
+</div>
+        </div>
+        <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+      </div>
+    </a>
+  </div>
+  <div class="w3-rest">
+  <h2 class="w3-large">
+    <strong>Spiti Tour Packages</strong>
+  </h2>
+</div> 
+
+</div>
+<br>
+
+<div class="w3-row">
+  <div class="slider-container w3-padding w3-content">
+    <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
+    <div class="slider-track" style="gap: 20px;">
+
+      {% for post in site.tour %}
+      {% if post.category contains "Spiti" %}
+      <div class="w3-row slid" style="height: fit-content; width: 300px;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}" aria-label="View details for {{ post.title }}">
+          <div class="w3-row" style="height: 290px; width:300px;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 | default: post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;" loading="lazy">
+          </div>
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">{{ post.duration }}</div>
+            </div>
+            <h3 class="w3-text-dark-gray" style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+              {{ post.title }}
+            </h3>
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom" style="padding: 6px 12px; background-color:#f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span></b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire at +918219471645" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <div class="w3-row slid w3-round-xlarge w3-center" style="margin-top:100px; height: 200px;"> 
+        <a href="{{site.url}}/spiti-tour-packages.html" aria-label="View all Spiti related tours" style="display:block;">
+          <div class="w3-row w3-round2 w3-center" style="height: 200px; width: 200px;">
+            <div style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); border:3px solid #f1f1f1; padding-top:13px; border-radius: 60px; width: 59.5px; height: 59.5px; margin: auto; margin-top: 50px;" class="w3-teal">
+              <svg aria-hidden="true" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"></path></svg>
+            </div><br>
+            <p class="w3-text-gray w3-small" style="margin-top: 3px;">View All spiti Related Tours</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <button class="slider-btn next-btn" aria-label="Next slide">›</button>
+  </div>
+</div>
+
+<div class="HR"></div>
+
+<!--Includes-->
     {% include card1.html %}
     {% include reviews.html %}
     {% include faq.html %}
