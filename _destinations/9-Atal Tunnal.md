@@ -3,6 +3,7 @@ layout: destination
 title: Atal Tunnal Manali
 name: Atal Tunnal
 categories: Manali
+permalink: atal-tunnal-manali.html
 designation: 
 image: atal-tunnal-manali.webp
 alt: Atal Tunnal Manali 
