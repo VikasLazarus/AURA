@@ -45,21 +45,14 @@
   </div>
 </nav>
 
-<div id="menuNav" class="w3-hide-large w3-hide-medium w3-large w3-white" style="padding-top: 60px; position: fixed; top: 0px; display: none; z-index: 300; height: 100%; width: 100%;" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+<div id="menuNav" class="w3-hide-large w3-hide-medium w3-large" style="background-color: #484848b7; position: fixed; top: 0px; display: none; z-index: 300; height: 100%; width: 100%;" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
   
-  <div class="w3-row w3-padding w3-text-dark-gray" style="margin: 0px; margin-top:60px;">
+  <div class="w3-row w3-padding w3-text-dark-gray w3-white w3-display-container" style="border-radius: 0px 15px 15px 0px; margin: 0px; height: 100%; width: 80%;">
+    <div onclick="document.getElementById('menuNav').style.display='none'" class="w3-display-bottomleft w3-padding w3-border-top" style="width: 100%;"><p>X Close Menu</p></div>
+    
     <div class="w3-row" style="padding-top: 12px;">
 
-      <div>
-        <button onclick="document.getElementById('menuNav').style.display='none'" class="w3-black w3-card-2 w3-button w3-small w3-round-xlarge w3-hover-teal w3-hover-text-black" style="padding: 3px 12px; border:none; display:flex; align-items:center;" aria-label="Close mobile menu">
-          <div class="w3-col" style="padding-top: 4px; width: 26px;"> 
-            <svg aria-hidden="true" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#ffffff"></path>
-            </svg>
-          </div> 
-          <div class="w3-rest w3-text-white" style="padding-top: 5px; margin-right: 12px;">Close Menu</div> 
-        </button>
-      </div> 
+      
 
       <p class="w3-xxlarge"><b>Menu</b></p>
 
