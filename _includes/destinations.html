@@ -17,11 +17,19 @@
 
       <!-- Swiper / Tablist -->
       <div class="w3-rest" style="padding-top:3px; padding-left:12px;">
-        <div class="slider-container w3-content" style="--slide-width: fit-content;">
-          <button class="slider-btn prev-btn w3-hide" aria-label="Previous slide">‹</button>
+        <div class="w3-content" style="--slide-width: fit-content; overflow: hidden;
+        position: relative;
+       
+        width: 100%;">
+          
           
           <!-- Replaced div with role="tablist" and changed items to <button> for native keyboard accessibility -->
-          <div class="slider-track" style="gap: 20px;" role="tablist" aria-label="Destinations">
+          <div style="gap: 20px; display: flex; overflow-x: auto;scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          width: 100%;
+          border-radius: 8px;
+          scrollbar-width: none;" role="tablist" aria-label="Destinations">
             
             <button style="padding: 6px 22px; background-color: rgb(245, 245, 245); border-radius:12px; border:none; cursor:pointer;" class="slide w3-hover-teal w3-small w3-button tablinks -active w3-teal" onclick="openCity(event, 'shimla')" id="tab-shimla" role="tab" aria-controls="shimla" aria-selected="true">
               Shimla
@@ -50,7 +58,7 @@
             
           </div>
 
-          <button class="slider-btn next-btn w3-hide" aria-label="Next slide">›</button>
+          
         </div>
       </div>
     </div>
@@ -70,7 +78,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Shimla" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <!-- Added descriptive aria-label -->
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
@@ -112,7 +120,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Manali" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
               <img alt="{{ post.alt | default: post.name }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-round-xlarge" style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
@@ -152,7 +160,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Dharamshala" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
               <img alt="{{ post.alt | default: post.name }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-round-xlarge" style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
@@ -192,7 +200,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Dalhousie" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
               <img alt="{{ post.alt | default: post.name }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-round-xlarge" style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
@@ -232,7 +240,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Leh" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
               <img alt="{{ post.alt | default: post.name }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-round-xlarge" style="object-fit:cover; overflow:hidden; width:100%; height:100%;">
@@ -272,7 +280,7 @@
       <div class="slider-track w3-margin-top" style="gap: 20px;">
         {% assign filtered_items = site.destinations | where: "destination", "Spiti" %}
         {% for post in filtered_items limit:9 %}
-        <div class="slide w3-round-xlarge" style="height: 320px width: 200px;"> 
+        <div class="slide w3-round-xlarge" style="height: 320px; width: 200px;"> 
           <a href="{{site.url}}{{ post.url }}" aria-label="View details for {{ post.name }}">
             <div class="w3-row" style="height: 200px; width: 200px;">
               <img alt="{{ post.alt | default: post.name }}" src="{{site.url}}/assets/images/{{ post.image }}" class="w3-round-xlarge" style="object-fit:cover; overflow:hidden; width:100%; height:100%;">

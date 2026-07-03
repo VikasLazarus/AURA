@@ -176,18 +176,71 @@
 </div>
 
 <script>
+  // ==========================================
+  // 1. TABS SCRIPT (Wakes up sliders on click)
+  // ==========================================
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    
+    // Hide all tab content
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    
+    // Remove active class from all buttons
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+    }
+    
+    // Show the selected tab and make its button active
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " w3-teal";
+
+    // Trigger window resize to wake up the slider in the new tab
+    setTimeout(function() {
+      window.dispatchEvent(new Event('resize'));
+    }, 10);
+  }
+
+  // ==========================================
+  // 2. SLIDER SCRIPT (Now scrolls one item at a time)
+  // ==========================================
   document.querySelectorAll(".slider-container").forEach(c => { 
     let t = c.querySelector(".slider-track"), 
         p = c.querySelector(".prev-btn"), 
-        n = c.querySelector(".next-btn"), 
-        u = () => { 
-          p.classList.toggle("disabled", t.scrollLeft <= 1); 
-          n.classList.toggle("disabled", t.scrollLeft + t.clientWidth >= t.scrollWidth - 1); 
+        n = c.querySelector(".next-btn");
+
+    if (t && p && n) {
+        let u = () => { 
+            // Calculate visibility based on scroll position
+            p.classList.toggle("disabled", t.scrollLeft <= 1); 
+            n.classList.toggle("disabled", Math.ceil(t.scrollLeft + t.clientWidth) >= t.scrollWidth - 1); 
         }; 
-    n.addEventListener("click", () => { t.scrollBy({ left: t.clientWidth, behavior: "smooth" }); }); 
-    p.addEventListener("click", () => { t.scrollBy({ left: -t.clientWidth, behavior: "smooth" }); }); 
-    t.addEventListener("scroll", u); 
-    window.addEventListener("resize", u); 
-    u(); 
+
+        // --- SINGLE SLIDE SCROLL LOGIC ---
+        n.addEventListener("click", () => { 
+            // Get the width of the first slide + any CSS gap spacing
+            let slideWidth = t.firstElementChild.offsetWidth;
+            let gap = parseInt(window.getComputedStyle(t).gap) || 0;
+            
+            t.scrollBy({ left: slideWidth + gap, behavior: "smooth" }); 
+        }); 
+        
+        p.addEventListener("click", () => { 
+            let slideWidth = t.firstElementChild.offsetWidth;
+            let gap = parseInt(window.getComputedStyle(t).gap) || 0;
+            
+            t.scrollBy({ left: -(slideWidth + gap), behavior: "smooth" }); 
+        }); 
+        // ---------------------------------
+        
+        t.addEventListener("scroll", u); 
+        window.addEventListener("resize", u); 
+        
+        // Run once on load
+        u(); 
+    }
   });
 </script>
