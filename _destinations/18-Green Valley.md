@@ -5,7 +5,7 @@ name: Green Valley
 categories: Shimla
 permalink: green-valley-shimla.html
 designation: 
-image: atal-tunnal-manali.webp
+image: green-valley shimla.webp
 alt: Green Valley Shimla
 description: Explore Green Valley Shimla, a mesmerizing destination surrounded by lush pine and deodar forests, perfect for nature lovers, photographers, and travelers seeking tranquility.
 keywords: Green Valley Shimla, Shimla tourist places, nature in Shimla, pine forests, deodar trees, Shimla travelGreen Valley Shimla
