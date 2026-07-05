@@ -5,7 +5,7 @@ name: Mall Road Shimla
 categories: Shimla
 permalink: mall-road-shimla.html
 designation: 
-image: atal-tunnal-manali.webp
+image: mall road shimla.webp
 alt: Mall Road Shimla
 description: Explore Mall Road Shimla the historic heart of Shimla with colonial architecture, vibrant shops, cultural landmarks, scenic views, and local cuisine. Discover its history, attractions, and travel tips.
 keywords: Mall Road Shimla, Shimla Mall Road shopping, Mall Road history, Shimla tourism, Christ Church Shimla, Gaiety Theatre, Scandal Point Shimla

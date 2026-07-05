@@ -5,7 +5,7 @@ name: Lakkar Bazaar
 categories: Shimla
 permalink: lakkar-bazaar-shimla.html
 designation: 
-image: atal-tunnal-manali.webp
+image: lakkar-bazzar.webp
 alt: Lakkar Bazaar Shimla
 description: Explore Lakkar Bazaar Shimla, the famous wooden crafts market rich in history and culture. Learn about its unique shopping experience, local food, and tips for visitors.
 keywords: Lakkar Bazaar Shimla, Wooden crafts Shimla, Shimla shopping, Himachali handicrafts, Lakkar Bazaar history, Shimla bazaars

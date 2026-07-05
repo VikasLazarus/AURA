@@ -5,7 +5,7 @@ name: Kali Bari Temple
 categories: Shimla
 permalink: kali-bari-temple-shimla.html
 designation: 
-image: atal-tunnal-manali.webp
+image: kali bari.webp
 alt: Kali Bari Temple Shimla - History, Spirituality, and Visiting Guide
 description: Explore the rich history, spiritual significance, and architectural beauty of Kali Bari Temple Shimla. Discover tips and visiting information to make the most of your visit.
 keywords: Kali Bari Temple Shimla, Kali Bari Temple history, Goddess Kali temple Shimla, Shimla Hindu temples, Kali Bari architecture, Shimla tourism

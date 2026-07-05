@@ -5,7 +5,7 @@ name: Tara Devi Temple
 categories: Shimla
 permalink: tara-devi-temple-shimla.html
 designation: 
-image: atal-tunnal-manali.webp
+image: tara-devi.webp
 alt: Tara Devi Temple Shimla
 description: Explore Tara Devi Temple Shimla, its rich history dating back 250 years, Pahari architectural masterpiece, spiritual significance, festivals, and visitor tips.
 keywords: Tara Devi Temple Shimla, Tara Devi temple history, Tara Devi architecture, Shimla temples, Sen dynasty temple, Pahari architecture, Tara Devi festivals

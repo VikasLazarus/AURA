@@ -5,7 +5,7 @@ name: Viceregal Lodge
 categories: Shimla
 permalink: viceregal-lodge-shimla.html
 designation: 
-image: alchi-monastery.webp
+image: viceragel.webp
 alt: Viceregal Lodge
 description: Discover the rich history, stunning Jacobethan architecture, and cultural significance of Viceregal Lodge Shimla. Learn about its role in colonial India, its architecture, heritage, and visitor information.
 keywords: Viceregal Lodge Shimla, Rashtrapati Niwas, Indian Institute of Advanced Study, Henry Irwin, British Raj Shimla, Shimla colonial architecture, Shimla tourist attractions

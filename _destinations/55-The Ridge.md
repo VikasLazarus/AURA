@@ -5,7 +5,7 @@ name: The Ridge
 categories: Shimla
 permalink: ridge-shimla.html
 designation: 
-image: alchi-monastery.webp
+image: ridge.webp
 alt: The Ridge Shimla - Historic Heart with Panoramic Views
 description: Explore The Ridge Shimla, a historic open space with panoramic views, iconic landmarks, cultural events, and vibrant local markets. Discover its history, attractions, and travel tips.
 keywords: The Ridge Shimla, Shimla Ridge history, Christ Church Shimla, Shimla tourist attractions, Mall Road Shimla, Gaiety Theatre, Scandal Point Shimla

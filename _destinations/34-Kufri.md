@@ -5,7 +5,7 @@ name: Kufri
 categories: Shimla, Popular
 permalink: kufri-shimla.html
 designation: 
-image: alchi-monastery.webp
+image: kufri.webp
 alt: Kufri Shimla 
 description: Explore Kufri Shimla, a picturesque hill station famous for adventure sports, breathtaking views, and vibrant culture. Learn about Kufri's history, attractions, activities, and visiting tips.
 keywords: Kufri Shimla, Kufri tourism, Kufri adventure sports, Kufri attractions, Himalayan Nature Park Kufri, Kufri skiing, Kufri history
