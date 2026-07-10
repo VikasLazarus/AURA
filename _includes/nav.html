@@ -67,10 +67,65 @@
         Contact Us</div>
       </a>
     </div>
+<style>
+ /* 1. The Outer Wrapper */
+.gradient-border-wrapper {
+  position: relative;
+  display: inline-flex; /* Keeps the wrapper tight around the button */
+  padding: 3px; /* This controls the border thickness */
+  border-radius: 16px; /* Outer curve */
+  overflow: hidden;
+  z-index: 1; /* Creates a stacking context so the gradient stays behind */
+}
 
+/* 2. The Spinning Gradient (Behind the button) */
+.gradient-border-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* Conic gradient creates a sweeping radar-like color circle */
+  background: conic-gradient(
+    transparent, 
+    #ee7752, 
+    #e73c7e, 
+    #23a6d5, 
+    #23d5ab, 
+    transparent 50%
+  );
+  animation: border-spin 3s linear infinite;
+  z-index: -1; /* Puts the gradient safely behind the inner button */
+}
+
+/* 3. The Inner Button */
+.inner-button {
+  background: #111; /* Solid color to hide the middle of the gradient */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.inner-button:hover {
+  background: #222;
+}
+
+/* 4. The Animation */
+@keyframes border-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
     <div style="display:flex; align-items:center; gap: 15px;">
-      <div class="w3-row w3-round-xxlarge w3-dark-gray" style="padding: 2px;">
-      <a href="#" class="w3-button w3-round-xxlarge nav-link w3-white w3-small w3-hover-dark-gray" style="padding: 6px 20px;">Quick Enquire</a>
+      <div class="w3-row w3-round-xxlarge gradient-border-wrapper" style="padding: 2px;">
+      <a href="#" class="w3-button inner-button w3-round-xxlarge nav-link w3-white w3-small w3-hover-dark-gray" style="padding: 6px 20px;">Quick Enquire</a>
     </div>
     </div>
 
