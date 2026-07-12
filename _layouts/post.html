@@ -191,7 +191,7 @@
 <!-- Navbar -->
 {% include nav.html %}
   <!--bottom fixed-->
-  {% include form2.html %}
+  {% include form1.html %}
  <!--bottom fixed-->
  
   <!--model bottom  fixed-->
@@ -373,7 +373,7 @@
 position: sticky;
 top:63px;">
 <div class="w3-col w3-right" style="width: 110px;">
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-small w3-card-4" style="border-radius: 30px; margin-top: 8px;">Enquire Now</button>
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-teal w3-small w3-card-4" style="border-radius: 30px; margin-top: 8px;">Enquire Now</button>
       </div>
 <div class="w3-rest">
               <p style="margin: 0px;"><b class="w3-xlarge">INR {{ page.price }} <span class="w3-small w3-text-gray">{{ page.price_per }}</span></b>
@@ -625,7 +625,7 @@ Stay Categories Available
                   <br><strike class="w3-text-gray w3-small">INR {{ page.price_x }}</strike>
                 </p>
 
-              </div>
+              </div></div>
               {% include form3.html %}
           </div>
         </div>
@@ -806,16 +806,7 @@ Stay Categories Available
 <!---ksdfzhal-->
 {% include footer.html %}
 
-  <script>
-    function myFunction(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-  </script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Pull the raw JSON string from Jekyll
