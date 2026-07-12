@@ -1,0 +1,50 @@
+<!-- Add an ID to your button and an empty div for the error message -->
+<form name="google-sheet-form" id="contact-form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    
+    <button type="submit" id="submit-button">Send</button>
+    
+    <!-- This will stay hidden until an error occurs -->
+    <div id="error-message" style="display: none; color: #d9534f; margin-top: 10px; font-weight: bold;"></div>
+  </form>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzyqHKWU4oNo3gYIy3jSW5fktMMtmHtHwZuUp7GDYyGLQxY5X9eueRIGhMZUCuMLCcZ/exec'; // Keep your current Apps Script URL
+    const form = document.forms['google-sheet-form'];
+    const submitButton = document.getElementById('submit-button');
+    const errorMessage = document.getElementById('error-message');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault(); 
+      
+      // 1. UI Loading State: Disable button so they don't click it twice
+      submitButton.disabled = true;
+      submitButton.innerText = "Sending...";
+      errorMessage.style.display = "none"; // Hide any previous errors
+      
+      fetch(scriptURL, { 
+        method: 'POST', 
+        body: new FormData(form)
+      })
+      .then(response => response.json()) // Read the JSON response from Apps Script
+      .then(data => {
+        if (data.result === "success") {
+          // 2. Redirect to your Jekyll Thank You page
+          // Ensure this URL matches your actual thanks page route
+          window.location.href = "/thank-you.html"; 
+        } else {
+          // If Apps Script executed but returned an error explicitly
+          throw new Error(data.error || "Submission failed.");
+        }
+      })
+      .catch(error => {
+        console.error('5. FETCH FAILED:', error);
+        errorMessage.innerText = "Error details: " + error.message;
+        errorMessage.style.display = "block";
+        submitButton.disabled = false;
+        submitButton.innerText = "Send";
+      });
+    });
+  </script>
