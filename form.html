@@ -1,50 +1,112 @@
-<!-- Add an ID to your button and an empty div for the error message -->
-<form name="google-sheet-form" id="contact-form">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message" required></textarea>
-    
-    <button type="submit" id="submit-button">Send</button>
-    
-    <!-- This will stay hidden until an error occurs -->
-    <div id="error-message" style="display: none; color: #d9534f; margin-top: 10px; font-weight: bold;"></div>
+<link rel="stylesheet" href="assets/css/main.css">
+<!-- Example 1: Sidebar Form (No Modal) -->
+<div class="w3-panel w3-light-grey w3-padding-16">
+  <h4>Quick Contact (Sidebar)</h4>
+  <form class="gscript-form w3-container">
+    <input type="text" name="name" class="w3-input w3-border w3-margin-bottom" placeholder="Name" required>
+    <input type="email" name="email" class="w3-input w3-border w3-margin-bottom" placeholder="Email" required>
+    <button type="submit" class="w3-button w3-blue w3-block">Send</button>
+    <div class="error-message w3-text-red w3-margin-top" style="display: none; font-weight: bold;"></div>
   </form>
+</div>
+
+<!-- Example 2: Form Inside a Modal (e.g., id="id01") -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4" style="max-width:500px">
+    <header class="w3-container w3-blue"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h2>Book a Package</h2>
+    </header>
+    
+    <form class="gscript-form w3-container w3-padding-16">
+      <input type="text" name="name" class="w3-input w3-border w3-margin-bottom" placeholder="Name" required>
+      <input type="email" name="email" class="w3-input w3-border w3-margin-bottom" placeholder="Email" required>
+      <button type="submit" class="w3-button w3-blue w3-block">Send</button>
+      <div class="error-message w3-text-red w3-margin-top" style="display: none; font-weight: bold;"></div>
+    </form>
+  </div>
+</div>
+
+<!-- The Universal Thank You Modal (Keep exactly one of these on the page) -->
+<div id="thank-you-modal" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px">
+    <header class="w3-container w3-green"> 
+      <span onclick="document.getElementById('thank-you-modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h2>Success!</h2>
+    </header>
+    <div class="w3-container w3-padding-16 w3-center">
+      <p>Thank you for reaching out. Our team will review your request and get back to you shortly.</p>
+      <button onclick="document.getElementById('thank-you-modal').style.display='none'" class="w3-button w3-green w3-margin-top">Close</button>
+    </div>
+  </div>
+</div>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzyqHKWU4oNo3gYIy3jSW5fktMMtmHtHwZuUp7GDYyGLQxY5X9eueRIGhMZUCuMLCcZ/exec'; // Paste your Web App URL here
+  const thanksModal = document.getElementById('thank-you-modal');
   
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzyqHKWU4oNo3gYIy3jSW5fktMMtmHtHwZuUp7GDYyGLQxY5X9eueRIGhMZUCuMLCcZ/exec'; // Keep your current Apps Script URL
-    const form = document.forms['google-sheet-form'];
-    const submitButton = document.getElementById('submit-button');
-    const errorMessage = document.getElementById('error-message');
-  
+  // 1. Find EVERY form on the page with the class 'gscript-form'
+  const allForms = document.querySelectorAll('.gscript-form');
+
+  // 2. Loop through each form and attach the submit listener
+  allForms.forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault(); 
       
-      // 1. UI Loading State: Disable button so they don't click it twice
+      // Find the specific button and error message for THIS form only
+      const submitButton = form.querySelector('button[type="submit"]');
+      const errorMessage = form.querySelector('.error-message');
+      
+      // Check if this form is inside a W3 Modal
+      const parentModal = form.closest('.w3-modal'); 
+      
+      // UI Loading State
       submitButton.disabled = true;
       submitButton.innerText = "Sending...";
-      errorMessage.style.display = "none"; // Hide any previous errors
+      if (errorMessage) errorMessage.style.display = "none";
       
-      fetch(scriptURL, { 
-        method: 'POST', 
-        body: new FormData(form)
-      })
-      .then(response => response.json()) // Read the JSON response from Apps Script
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => response.json())
       .then(data => {
         if (data.result === "success") {
-          // 2. Redirect to your Jekyll Thank You page
-          // Ensure this URL matches your actual thanks page route
-          window.location.href = "/thank-you.html"; 
+          
+          // Reset this specific form and button
+          form.reset();
+          submitButton.disabled = false;
+          submitButton.innerText = "Send";
+          
+          // If the form was inside a modal, close that specific modal
+          if (parentModal) {
+            parentModal.style.display = "none";
+          }
+          
+          // Open the universal Thanks Modal
+          thanksModal.style.display = "block";
+          
         } else {
-          // If Apps Script executed but returned an error explicitly
-          throw new Error(data.error || "Submission failed.");
+          throw new Error(data.error);
         }
       })
       .catch(error => {
-        console.error('5. FETCH FAILED:', error);
-        errorMessage.innerText = "Error details: " + error.message;
-        errorMessage.style.display = "block";
+        console.error('Error!', error.message);
+        if (errorMessage) {
+          errorMessage.innerText = "Something went wrong. Please try again.";
+          errorMessage.style.display = "block";
+        }
         submitButton.disabled = false;
         submitButton.innerText = "Send";
       });
     });
-  </script>
+  });
+
+  // Close modals if the user clicks the dark overlay background
+  window.onclick = function(event) {
+    if (event.target.classList.contains('w3-modal')) {
+      event.target.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+   
