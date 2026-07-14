@@ -2,21 +2,20 @@
   <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-round-xlarge" style="max-width:500px">
     <header class="w3-container w3-center"> 
      
-<div class="w3-circle w3-white w3-margin-top" style=" padding:1px; border: 4px solid #c31431b6; height: 80px; width: 80px; margin: auto;">
-  <div class="w3-circle w3-teal" style="border: 4px solid #c31431e3; height: 70px; width: 70px;">
-    <svg style="margin-top: 1px;" width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle opacity="0.5" cx="12" cy="12" r="10" stroke="#c31432" stroke-width="1.5"/>
+<div class="w3-circle w3-margin-top w3-card-4" style=" padding:1px; background-color:  #c31431; height: 70px; width: 70px; margin: auto;">
+    <svg style="margin-top: 4px;" width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle opacity="0.5" cx="12" cy="12" r="10" stroke="" stroke-width="1.5"/>
       <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
 
-  </div>
+
 </div>
 
       <p class="w3-large">Successfully Submitted</p>
     </header>
     <div class="w3-container w3-center">
       <p class="w3-small w3-text-gray">Thank you for reaching out. Our team will review your request and get back to you shortly.</p>
-      <button onclick="document.getElementById('thank-you-modal').style.display='none'" class="w3-margin-bottom w3-small w3-button w3-teal w3-round-xlarge w3-margin-top">Close</button>
+      <button onclick="document.getElementById('thank-you-modal').style.display='none'" style="padding: 6px 28px;" class="w3-card-4 w3-margin-bottom w3-small w3-button w3-teal w3-round-xlarge w3-margin-top">Close</button>
     </div>
   </div>
 </div>
@@ -29,8 +28,10 @@
         <p class="w3-tiny w3-text-light-gray">Get a call back from us and get a hassle-free booking experience with Trip Quest Holidays.</p>
       </div>
       <div class="w3-third">
-        <form class="w3-row" style="max-width: 600px; margin-top: 18px;">
-          <input aria-label="Mobile Number" class="w3-tiny w3-input w3-col w3-border" type="tel" placeholder="Mobile Number" style="width:54%; border-radius:15px 0px 0px 15px; height: 42px;" required="">
+        <form class="gscript-form w3-row" style="max-width: 600px; margin-top: 18px;">
+          <input aria-label="name" name="name" id="name" class="w3-hide" value="Call Back Request">
+          <input aria-label="email" name="email" id="email" class="w3-hide" value="vikasj500h@gmail.com">
+          <input aria-label="Mobile Number" name="phone" id="phone" class="w3-tiny w3-input w3-col w3-border" type="tel" placeholder="Mobile Number" style="width:54%; border-radius:15px 0px 0px 15px; height: 42px;" required="">
           <button class="w3-tiny w3-button w3-col w3-text-white w3-teal" style="width:46%; border-radius:0px 15px 15px 0px; height: 42px;" type="submit">Get Call Back</button>
         </form>
         <div class="w3-row w3-hide-large w3-hide-medium" style="margin: 16px;"></div>
@@ -327,7 +328,7 @@
           // Reset this specific form and button
           form.reset();
           submitButton.disabled = false;
-          submitButton.innerText = "Send";
+          submitButton.innerText = "Done";
           
           // If the form was inside a modal, close that specific modal
           if (parentModal) {
@@ -348,7 +349,7 @@
           errorMessage.style.display = "block";
         }
         submitButton.disabled = false;
-        submitButton.innerText = "Send";
+        submitButton.innerText = "Done";
       });
     });
   });

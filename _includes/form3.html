@@ -1,36 +1,30 @@
-<form class="w3-text-dark-gray w3-row w3-padding gscript-form">
-    <div style="margin-bottom: 6px;" class="elem-group w3-col s12 m12 l12">
-
-      <input style="border-radius: 10px;" class="w3-margin-top w3-input w3-round w3-border w3-border-light-gray" type="text" id="name"
-        name="visitor_name" placeholder="Full Name" pattern="[A-Z\sa-z]{3,20}" required="">
+<form class="gscript-form w3-padding">
+  <div style="margin-bottom: 6px;" class="elem-group w3-col s12 m12 l12">
+    <label for="name" class="w3-small" style="margin-bottom: 4px;">Full Name <span class="w3-text-red">*</span></label>
+    <input style="border-radius: 15px;" class="w3-input w3-small w3-round w3-tiny w3-border" type="text" id="name" name="name" placeholder="John Doe" pattern="[A-Z\sa-z]{3,20}" required="">
+  </div>
+  <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
+    <label for="email" class="w3-small" style="margin-bottom: 4px;">Email Address <span class="w3-text-red">*</span></label>
+    <input style="border-radius: 15px;" class="w3-input w3-small w3-round w3-tiny w3-border" type="email" id="email" name="email" placeholder="john.doe@email.com" required="">
+  </div>
+  <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
+    <label for="phone" class="w3-small" style="margin-bottom: 4px;">Contact Number <span class="w3-text-red">*</span></label>
+    <input style="border-radius: 15px;" class="w3-input w3-small w3-round w3-tiny w3-border" type="tel" id="phone" name="phone" placeholder="+91-81294-71645" required="">
+  </div>
+  <div class="w3-row">
+    <div class="w3-col s4 m4 l4" style="margin-bottom: 6px;">
+      <label for="adult" class="w3-small" style="margin-bottom: 4px;">Traveller Count <span class="w3-text-red">*</span></label>
+      <input style="border-radius: 15px;" class="w3-input w3-small w3-round w3-tiny w3-border" type="number" id="adult" name="adults" placeholder="Travellers Count" min="1" required="">
     </div>
-    <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-
-      <input style="border-radius: 10px;" class=" w3-input w3-round w3-border w3-border-light-gray" type="email"
-        id="email" name="visitor_email" placeholder="john.doe@email.com" required="">
+    <div class="w3-col s8 m8 l8" style="padding-left: 12px;">
+      <label for="checkout-date" class="w3-small" style="margin-bottom: 4px;">Travel Date <span class="w3-text-red">*</span></label>
+      <input style="margin-bottom: 4px; border-radius: 15px;" class="w3-right-align w3-rest w3-input w3-small w3-round w3-tiny w3-border" type="date" id="checkout-date" name="date" required="">
     </div>
-    <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-
-      <input style="border-radius: 10px;" class="w3-input w3-round w3-border w3-border-light-gray" type="tel" id="phone"
-        name="visitor_phone" placeholder="Mobile Number" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})"
-        required="">
-    </div>
-
-    <div class=" w3-col s12 m12 l12" style="margin-bottom: 6px;">
-      <input style="border-radius: 10px;" class=" w3-input w3-round w3-border w3-border-light-gray" type="number"
-        id="adult" name="total_adults" placeholder="Travelrs Count" min="1" required="">
-    </div>
-    <div class="w3-">
-      <label style="height: 43px; display: flex;
-    align-items: center;"
-     class="w3-col s4 m4 l4" for="checkout-date">Travel date</label>
-      <input style="margin-bottom: 4px; border-radius: 10px;"
-        class="w3-col s8 m8 l8 w3-input w3-round w3-border w3-border w3-border-light-gray" type="date" id="checkout-date"
-        name="checkout" required="">
-    </div>
-    <button class="w3-button w3-round w3-text-white w3-margin-top w3-margin-bottom w3-left w3-teal w3-small"
-      style="border-radius: 30px;" type="submit">Connect With An Expert</button>
-
-
+  </div>
+  <input class=" w3-hide" type="text" id="tour" name="tour" value="{{ page.title }}">
+  <div class="w3-row">
+    <button class="w3-mobile w3-button w3-round w3-text-white w3-margin-top w3-margin-bottom w3-left w3-teal w3-small w3-block" style="border-radius: 30px;" type="submit">Enquire Now</button>
+  </div>
+  <div class="error-message w3-text-red w3-margin-top" style="display: none; font-weight: bold;"></div>
 
 </form>
