@@ -1,19 +1,61 @@
 [
     {
+        "id": "6a564dc9e87cd",
+        "destination": "Goldan",
+        "question": "How is transportation usually managed between these cities?",
+        "answer": "Given the long distances and the shift from highways to winding mountain roads, transportation is typically handled via private, air-conditioned vehicles (such as Innovas or sedans) booked for the entire duration of the trip. For a unique experience, many travelers choose to take the UNESCO-listed Kalka-Shimla Toy Train for a scenic, 5-hour ride up into the mountains before resuming their road travel."
+    },
+    {
+        "id": "6a564dab45cad",
+        "destination": "Goldan",
+        "question": "What are the major highlights and activities on this tour?",
+        "answer": "In the Golden Triangle: Watching the sunrise at the Taj Mahal, exploring the massive Agra Fort, taking an elephant or jeep ride at Jaipur&#039;s Amer Fort, and touring Delhi&#039;s India Gate and Qutub Minar.\r\n\r\nIn Himachal: Walking Shimla&#039;s colonial Mall Road, experiencing the high-altitude snowscapes of Rohtang Pass and Solang Valley, visiting the ancient Hadimba Temple in Manali, and trying adventure sports like river rafting or paragliding in Kullu."
+    },
+    {
+        "id": "6a564d8cd7d80",
+        "destination": "Goldan",
+        "question": "When is the best time of year to take this trip?",
+        "answer": "Because this tour spans varying altitudes, the best time depends on the traveler&#039;s weather preferences:\r\nOctober to March (Winter): The weather is incredibly pleasant for exploring the forts and monuments of Delhi, Agra, and Jaipur. In Himachal, this is the best time to experience snowfall and winter sports in Manali and Shimla.\r\n\r\nApril to June (Summer): While the Golden Triangle cities will be quite hot, this is the peak season for Himachal Pradesh. The cool mountain air provides a perfect escape, making it ideal for outdoor activities and sightseeing in the valleys."
+    },
+    {
+        "id": "6a564d66f2651",
+        "destination": "Goldan",
+        "question": "How many days are required to comfortably complete this tour?",
+        "answer": "To fully experience both the historical monuments of the plains and the Himalayan hill stations without rushing, the ideal duration is between 11 to 14 days. This generally breaks down to about 5 to 6 days exploring Delhi, Agra, and Jaipur, and 6 to 7 days relaxing and sightseeing in the Himachal region."
+    },
+    {
+        "id": "6a564d337fff7",
+        "destination": "Goldan",
+        "question": "What destinations are included in the Golden Triangle with Himachal Tour?",
+        "answer": "This extensive circuit combines the cultural and historical heritage of India&#039;s classic Golden Triangle\u2014Delhi, Agra, and Jaipur\u2014with the scenic, mountainous landscapes of Himachal Pradesh. The Himachal leg almost always covers Shimla, Kullu, and Manali, with some itineraries also including a transit stop in Chandigarh."
+    },
+    {
+        "id": "6a5649b21e039",
+        "destination": "Home",
+        "question": "Are flights included in standard Himachal travel packages?",
+        "answer": "Most standard Himachal travel packages start from nearby major hubs like Delhi or Chandigarh, providing Volvo bus or private car transfers from there. Flights are typically not included in the base price but can be added as a custom inclusion by your travel agent upon request."
+    },
+    {
+        "id": "6a564994eed9f",
+        "destination": "Home",
+        "question": "Can I experience snow in Himachal during the summer?",
+        "answer": "While the towns of Shimla and Manali do not have snow in the summer, you can often find snow at higher altitudes like the Rohtang Pass (near Manali) or high mountain passes in the Lahaul and Spiti district well into May and June."
+    },
+    {
+        "id": "6a564978361da",
+        "destination": "Home",
+        "question": "Do I need any special permits to visit places in Himachal?",
+        "answer": "For most regular tourist destinations like Shimla, Manali, and Dalhousie, Indian citizens do not need permits. However, visiting the Rohtang Pass requires a permit (usually handled by your tour operator if you book comprehensive Himachal travel packages). Foreign nationals require Inner Line Permits (ILP) to visit protected areas like parts of Spiti and Kinnaur."
+    },
+    {
+        "id": "6a56493f06d07",
+        "destination": "Home,Shimla,Manali",
+        "question": "Are Himachal travel packages safe for solo female travelers?",
+        "answer": "Yes, Himachal Pradesh is generally considered one of the safest states in India for solo female travelers. The locals are respectful and helpful. However, it is always wise to book reputable Himachal travel packages, avoid isolated areas at night, and keep your family informed about your whereabouts."
+    },
+    {
         "id": "6a3951dc13c21",
         "destination": "Home",
-        "question": "How many days are ideal for a Himachal Pradesh trip?",
-        "answer": "i dont know more of this."
-    },
-    {
-        "id": "6a390bde44a61",
-        "destination": "Shimla",
-        "question": "nn",
-        "answer": "nn"
-    },
-    {
-        "id": "6a390b8fe29a1",
-        "destination": "Shimla",
         "question": "How many days are ideal for a Himachal Pradesh trip?",
         "answer": "A typical trip covering major spots like Shimla and Manali requires at least 6 to 7 days. If you wish to explore Dharamshala, Dalhousie, or the Spiti Valley, you should look for Himachal travel packages that span 10 to 14 days."
     }
