@@ -56,166 +56,8 @@
 
 <body>
 
-  <!--bottom fixed-->
-     <!--model bottom 2  fixed-->
-  <div class="w3-container">
-
-
-    <div id="id02" class="w3-row w3-modal" style="background-color: #48484889; z-index: 120;">
-      <div class="w3-row w3-bottom w3-white w3-mobile w3-card-4" style="right: 0; max-width: 420px; border-radius: 15px 15px 0px 0px;">
-        <div class="w3-row">
-          <span onclick="document.getElementById('id02').style.display='none'"
-            class="w3-button w3-teal w3-card-4 w3-display-topright"
-            style="padding: 6px 12px; border-radius: 30px; margin-top: -45px; margin-right: 12px;">&times;</span>
-
-          <div class="w3-hal w3-padding">
-
-            <div class="w3-text-dark-gray" style="border-radius: 15px;">
-              <div style="margin-top: 30px;">
-                <h2 class="w3-xlarge"><strong>
-                    Get Call From Our Sales Executive.
-                  </strong></h2>
-                <p class="w3-small">Please, Fill The From And Get Call From Our Expert Tour Executive For A Customized Travel Package.</p>
-
-              </div>
-              <hr>
-              <form class="w3-text-dark-gray w3-row"
-                onsubmit="alert('Thanks For Submiting The Form. Our Executives Will Reach To You Within 24 Hours');"
-                method="page">
-                <div style="margin-bottom: 6px;" class="elem-group w3-col s12 m12 l12">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Full Name <span class="w3-text-red">*</span>
-                  </lable>
-                  <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border" type="text"
-                    id="name" name="visitor_name" placeholder="Jonh Doe" pattern="[A-Z\sa-z]{3,20}" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Email Address <span class="w3-text-red">*</span>
-                  </lable>
-
-                  <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border" type="email"
-                    id="email" name="visitor_email" placeholder="john.doe@email.com" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Contect Number <span class="w3-text-red">*</span>
-                  </lable>
-
-                  <input style="border-radius: 15px;" class="w3-input w3-large w3-round w3-tiny w3-border" type="tel"
-                    id="phone" name="visitor_phone" placeholder="+91-81294-71645"
-                    pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required="">
-                </div>
-                <div class="w3-row">
-                  <div class=" w3-col s4 m4 l4" style="margin-bottom: 6px;">
-                    <lable class="w3-small" style="margin-bottom: 4px;">Traveller Count <span
-                        class="w3-text-red">*</span></lable>
-                    <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border"
-                      type="number" id="adult" name="total_adults" placeholder="Travelrs Count" min="1" required="">
-                  </div>
-
-                  <div class="w3-col s8 m8 l8" style="padding-left: 12px;">
-                    <lable class="w3-small" style="margin-bottom: 4px;">Travel Date <span class="w3-text-red">*</span>
-                    </lable>
-
-                    <input style="margin-bottom: 4px; border-radius: 15px;"
-                      class="w3-right-align w3-rest w3-input w3-large w3-round w3-tiny w3-border" type="date"
-                      id="checkout-date" name="checkout" required="">
-                  </div>
-
-                </div>
-
-
-            </div>
-            <div class="w3-row">
-              <button
-                class="w3-large w3-mobile w3-button w3-round w3-text-white w3-margin-top w3-margin-bottom w3-left w3-teal w3-small"
-                style="border-radius: 30px;" type="submit">Connect With An Expert</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--model bottom  fixed-->
-  <div class="w3-container">
-
-
-    <div id="id01" class="w3-modal" style="background-color: #48484889; z-index: 120;">
-      <div class="w3-bottom w3-white w3-card-4" style="border-radius: 15px 15px 0px 0px;">
-        <div class="w3-row">
-          <span onclick="document.getElementById('id01').style.display='none'"
-            class="w3-button w3-teal w3-card-4 w3-display-topright"
-            style="padding: 6px 12px; border-radius: 30px; margin-top: -45px; margin-right: 12px;">&times;</span>
-
-          <div class="w3-half w3-padding">
-
-            <div class="w3-text-dark-gray" style="border-radius: 15px;">
-              <div style="margin-top: 30px;">
-                <h2 class="w3-large"><strong>
-                    Get Costomized {{ page.destination }} Travel package
-
-                  </strong></h2>
-                
-
-              </div>
-              <hr>
-              <form class="w3-text-dark-gray w3-row"
-                onsubmit="alert('Thanks For Submiting The Form. Our Executives Will Reach To You Within 24 Hours');"
-                method="page">
-                <div style="margin-bottom: 6px;" class="elem-group w3-col s12 m12 l12">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Full Name <span class="w3-text-red">*</span>
-                  </lable>
-                  <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border" type="text"
-                    id="name" name="visitor_name" placeholder="Jonh Doe" pattern="[A-Z\sa-z]{3,20}" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Email Address <span class="w3-text-red">*</span>
-                  </lable>
-
-                  <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border" type="email"
-                    id="email" name="visitor_email" placeholder="john.doe@email.com" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-                  <lable class="w3-small" style="margin-bottom: 4px;">Contect Number <span class="w3-text-red">*</span>
-                  </lable>
-
-                  <input style="border-radius: 15px;" class="w3-input w3-large w3-round w3-tiny w3-border" type="tel"
-                    id="phone" name="visitor_phone" placeholder="+91-81294-71645"
-                    pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required="">
-                </div>
-                <div class="w3-row">
-                  <div class=" w3-col s4 m4 l4" style="margin-bottom: 6px;">
-                    <lable class="w3-small" style="margin-bottom: 4px;">Traveller Count <span
-                        class="w3-text-red">*</span></lable>
-                    <input style="border-radius: 15px;" class=" w3-input w3-large w3-round w3-tiny w3-border"
-                      type="number" id="adult" name="total_adults" placeholder="Travelrs Count" min="1" required="">
-                  </div>
-
-                  <div class="w3-col s8 m8 l8" style="padding-left: 12px;">
-                    <lable class="w3-small" style="margin-bottom: 4px;">Travel Date <span class="w3-text-red">*</span>
-                    </lable>
-
-                    <input style="margin-bottom: 4px; border-radius: 15px;"
-                      class="w3-right-align w3-rest w3-input w3-large w3-round w3-tiny w3-border" type="date"
-                      id="checkout-date" name="checkout" required="">
-                  </div>
-
-                </div>
-
-
-            </div>
-            <div class="w3-row">
-              <button
-                class="w3-large w3-mobile w3-button w3-round w3-text-white w3-margin-top w3-margin-bottom w3-left w3-teal w3-small"
-                style="border-radius: 30px;" type="submit">Connect With An Expert</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+  {% include form1.html %}
+  {% include form2.html %}
 
 
   <!--end-->
@@ -356,62 +198,23 @@ top:63px;">
         </div>
       </div>
 
-       <div class="w3-third w3-hide-small" style="object-fit: contain; padding: 6px 6px; position: sticky; top: 60px;">
-        <div class="w3-row w3-round w3-padding">
+      <div class="w3-third w3-hide-small" style="object-fit: contain; padding: 6px 6px; position: sticky; top: 63px;">
+        <div class="w3-row w3-round w3-paddin">
 
         
 
           <div class="">
 
-            <div class="w3-text-dark-gray w3-border w3-margin-top w3-border-light-gray" style="border-radius: 10px;">
+            <div class="w3-text-dark-gray w3-margin" style="margin-top: 0px !important; background-color: #f9f9f9; border-radius: 10px;">
               <div class="w3-padding">
-                <h2 class="w3-large"><strong>
-                 Get Your Coustomized {{ page.destination }} Tour Package
-                  </strong></h2>
-                  <hr style="margin:2px 0px; border-top:2px solid #ff5555; border-radius:30px; width:40%;">
+                <h2 class="w3-large w3-text-dark-gray" style="font-weight: 700;">
+                 Get Your Coustomized Tour Package Now
+                  </h2>
+                 
                 
 
-              </div>
-              <form class="w3-text-dark-gray w3-row w3-padding"
-                onsubmit="alert('Thanks For Submiting The Form. Our Executives Will Reach To You Within 24 Hours');"
-                method="page">
-                <div style="margin-bottom: 6px;" class="elem-group w3-col s12 m12 l12">
-
-                  <input style="border-radius: 10px;" class="w3-margin-top w3-input w3-round w3-tiny w3-border w3-border-light-gray" type="text" id="name"
-                    name="visitor_name" placeholder="Full Name" pattern="[A-Z\sa-z]{3,20}" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-
-                  <input style="border-radius: 10px;" class=" w3-input w3-round w3-tiny w3-border w3-border-light-gray" type="email"
-                    id="email" name="visitor_email" placeholder="john.doe@email.com" required="">
-                </div>
-                <div class="elem-group w3-col s12 m12 l12" style="margin-bottom: 6px;">
-
-                  <input style="border-radius: 10px;" class="w3-input w3-round w3-tiny w3-border w3-border-light-gray" type="tel" id="phone"
-                    name="visitor_phone" placeholder="Mobile Number" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})"
-                    required="">
-                </div>
-
-                <div class=" w3-col s12 m12 l12" style="margin-bottom: 6px;">
-                  <input style="border-radius: 10px;" class=" w3-input w3-round w3-tiny w3-border w3-border-light-gray" type="number"
-                    id="adult" name="total_adults" placeholder="Travelrs Count" min="1" required="">
-                </div>
-
-
-                <div class="w3-">
-                  <label style="height: 35px; display: flex;
-                align-items: center;"
-                 class="w3-col s4 m4 l4" for="checkout-date">Travel date</label>
-                  <input style="margin-bottom: 4px; border-radius: 10px;"
-                    class="w3-col s8 m8 l8 w3-input w3-round w3-tiny w3-border w3-border w3-border-light-gray" type="date" id="checkout-date"
-                    name="checkout" required="">
-                </div>
-                <button class="w3-button w3-round w3-text-white w3-margin-top w3-margin-bottom w3-left w3-teal w3-small"
-                  style="border-radius: 30px;" type="submit">Connect With An Expert</button>
-
-            </div>
-
-            </form>
+              </div></div>
+              {% include form3.html %}
           </div>
         </div>
 
@@ -432,67 +235,115 @@ top:63px;">
 
 
  <!--related pacages-->
- <div class="w3-container w3-content w3-margin-top">
- <div class="w3-large w3-text-dark-gray">
-      <h2 class="w3-large w3-margin-top"><strong>Related Travel Packages</strong></h2>
-    </div>
-</div>
- <div class="w3-row">
-  <div class="w3-content" style="padding: 12px;">
+ <!--Travel packages-->
+ <div>
+
+
+
+
+
+
+  <div class="w3-content w3-padding">
+
+   
+
+  
+   
+<div class="w3-row w3-row-padding" style="margin: 0px -16px;">
 
  
- {% assign current_cat = page.destination %}
-
-
-{% for post in site.tour %}
-  {% if post.category contains current_cat %}
-    <div class="w3-third" style="margin-bottom:30px ;">
-          <a class="w3-row w3-margin-bottom" style="text-decoration: none;" href="{{ site.url }}{{ post.url | relative_url }}">
-              <div class="w3-row w3-display-container" style="height: 290px; width:100%;">
-                <img class="w3-border w3-border-light-gray" alt="{{ post.title }}" src="{{ site.url }}/assets/images/{{ post.img1 }}" style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
-              </div>
+   <h2 class="w3-large" style="padding: 10px 8px; margin-bottom: 18px;"><strong>Related Tour Packages</strong></h2>
+ 
+ 
+{% assign current_cat = page.destination %}
+       {% for post in site.tour %}
+       {% if post.category contains current_cat %}
+       <!--1-->
+       <div class="w3-third" style="margin-bottom: 30px; height: fit-content;">
+         <a class="w3-row" style="display: block; text-decoration: none;"
+           href="{{ site.url }}{{ post.url | relative_url }}">
+           <div class="w3-row" style="height: 300px; width:100%px;">
+             <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 }}"
+               src="{{ site.url }}/assets/images/{{ post.img1 }}"
+               style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
+             
+           </div>
+   
+           <div class="w3-row">
+             <div class="w3-row w3-margin-top">
+               <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">
+                   {{ post.duration }}</div>
+               <div class="w3-right w3-text-gray w3-small">
+                 
+               </div>
+             </div>
+   
+             <h3 class="w3-text-dark-gray"
+               style="font-size: 13px; margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 500; -webkit-box-orient: vertical; font-size:15px;">
+               {{ post.title }}
+             </h3>
+   <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+             <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom"
+               style="padding: 6px 12px; background-color:#f8f9fa;">
+               Destinations: {{ post.destinations }} Etc.
+             </div>
+   
+             <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{
+                 post.price_per }}</span> </b>
+             <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+           </div>
+         </a>
+   
+         <div class="w3-row w3-margin-top">
+           <div class="w3-col" style="width: 50px;">
+             <a href="tel:+918219471645" aria-label="Call Now To Enquire"
+               class="w3-button w3-light-gray w3-small w3-border w3-border-sand"
+               style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+               <svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                 <path
+                   d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+               </svg>
+             </a>
+           </div>
+           <div class="w3-rest">
+             <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal"
+               style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+               Request Callback
+             </button>
+           </div>
+         </div>
+       </div>
+       {% endif %}
+       {% endfor %}
+     
   
-              <div class="w3-row">
-                <div class="w3-row w3-margin-top">
-                  <div class="w3-left w3-text-gray"><b>
-                  <svg width="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#484848" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
-                    {{ post.duration }}</b></div>
-                  <div class="w3-right w3-text-gray"></div>
-                </div>
-                
-                <h3 class="w3-text-dark-gray" style="font-size: 20px; margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; font-weight: 700; -webkit-box-orient: vertical; font-size:18px;">
-                  {{ post.title }}
-                </h3>
-  
-                <div class="w3-row w3-small w3-text-gray w3-round" style="padding: 6px 0px; background-image: linear-gradient(#ffffff00, #f9f9f9, #ffffff00);">
-                  <b><i>Destinations: </i>{{ post.destinations }} Etc.</b>
-                </div>
-  
-                <b class="w3-xlarge" style="margin-top: 0px;">{{ post.price }} <span class="w3-small w3-text-gray">{{ post.priceper }}</span> </b>
-                <br><strike class="w3-text-gray">{{ post.xprice }}</strike>  
-              </div> 
-          </a>
-          
-          <div class="w3-row w3-margin-top">
-              <div class="w3-col" style="width: 50px;">
-                <a href="tel:+918219471645" aria-label="Call Now To Enquire" class="w3-button w3-light-gray w3-small w3-border w3-border-sand" style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
-                  <svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg>
-                </a>
-              </div>
-              <div class="w3-rest">
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal" style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
-                  Request Callback
-                </button>
-              </div>
-            </div>
-        </div>
-  {% endif %}
-{% endfor %}
-
 
  
+
+ 
+
+ 
+     
+       
+      
+
+ 
+
+         </div>
+
+
  </div>
- </div>
+
+   
+ 
+ 
+
+
+   
+
+       
+
+   </div>
  
   <!--Related Packages-->
 
