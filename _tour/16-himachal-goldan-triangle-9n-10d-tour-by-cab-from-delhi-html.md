@@ -2,7 +2,7 @@
 layout: post
 tour_id: 16
 user_id: 1
-title: "himachal Goldan Triangle 8 Nights 10 Days Tour By Cab From Delhi"
+title: "Himachal Goldan Triangle 8 Nights 10 Days Tour By Cab From Delhi"
 description: "Delhi \u2013 Agra \u2013 Jaipur \u2013 Shimla \u2013 Manali \u2013 Delhi"
 keywords: "None"
 permalink: "himachal-goldan-triangle-9n-10d-tour-by-cab-from-delhi.html"
@@ -19,7 +19,7 @@ price_per: "Per Person"
 duration: "9 Nights 10 Days"
 duration_short: "9N 10D"
 created_at: "2026-07-14 08:10:32"
-img1: "placeholder.webp"
+img1: "taj-mehal.jpg"
 imgh1: ""
 itinerary: "[]"
 ---
