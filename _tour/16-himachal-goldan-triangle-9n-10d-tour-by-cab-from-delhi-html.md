@@ -7,7 +7,7 @@ description: "Delhi \u2013 Agra \u2013 Jaipur \u2013 Shimla \u2013 Manali \u2013
 keywords: "None"
 permalink: "himachal-goldan-triangle-9n-10d-tour-by-cab-from-delhi.html"
 category: "Goldan Triangle"
-categories: "Goldan Triangle"
+categories: "Goldan Triangle , Popular"
 destinations: "Delhi \u2013 Agra \u2013 Jaipur \u2013 Shimla \u2013 Manali \u2013 Delhi."
 from_location: "Delhi"
 route: "Delhi \u2013 Agra \u2013 Jaipur \u2013 Shimla \u2013 Manali \u2013 Delhi"
