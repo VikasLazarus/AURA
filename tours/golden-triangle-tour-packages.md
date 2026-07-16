@@ -1,17 +1,15 @@
 ---
 layout: goldan
 category: Goldan
-title: "Golden Triangle Tour Packages"
+title: "Golden Triangle Tour with Himachal: The Ultimate Travel Guide"
 date: 2023-01-01 10:00:00 +0530
 categories: [Goldan]
 permalink: golden-triangle-tour-packages.html
 img: placeholder.webp
 discription: "Himachal Tour Packages are here for you. First, find top deals today. Also, book a fun trip to the hills. So, save cash and enjoy."
 keywords: "Himachal Tour Packages, family trip to Shimla, Manali honeymoon tour, cheap hill station holidays, India travel, budget travel in India, best time to visit Himachal, solo travel packages"
-first-100: "<strong>Himachal Tour Packages</strong> are great for your next fun trip. First, good <strong>Himachal Tour Packages</strong> make your trip very easy. Also, the best <strong>Himachal Tour Packages</strong> bring you deep joy. Truly, you will love the high hills. And, the tall trees look so nice. Next, you can see white snow. Plus, the cold air feels very fresh. Therefore, you must book a trip today. In fact, we have top deals for you. So, get ready for fun. Then, you can pack your bags. After that, we will help you out. Thus, your nice trip will be the best."
+first-100: "Experience the perfect blend of royal history and majestic mountains with our Golden Triangle Tour with Himachal. This journey is more than just a vacation; it is an exploration of India’s soul. Consequently, you will witness the architectural brilliance of the Mughal Empire and the serene beauty of the Himalayas all in one trip."
 date: 2023-01-01 10:00:00 +0530
-categories: [all, Himachal]
-
 destinations: Shimla, Manali, Dharamshala, Dalhousie, Leh Ladakh, Spiti
 conclusion:
   - title: "Conclusion"
