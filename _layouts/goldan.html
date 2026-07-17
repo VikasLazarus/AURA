@@ -262,12 +262,7 @@
 <div style="margin-top: 40px;">
         <h1 class="w3-text-dark-gray w3-margin-top" style="font-size: 28px;"><strong>{{ page.title }}</strong></h1>
         <div class="w3-row">
-          <div id="openShareBtn" class="share-trigger-btn w3-hover-text-teal" style="margin: 12px 0px;">
-            <div class="w3-col" style="width: 28px;">
-            <svg width="22px" height="22px" viewBox="0 0 0.66 0.66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.578.247V.083m0 0H.413m.165 0L.331.33M.276.083H.214c-.046 0-.069 0-.087.009a.1.1 0 0 0-.036.036C.083.145.083.168.083.214v.231c0 .046 0 .069.009.087a.1.1 0 0 0 .036.036c.017.01.04.01.086.01h.231c.046 0 .069 0 .087-.009A.1.1 0 0 0 .568.533c.01-.018.01-.041.01-.087V.385" stroke="#000" stroke-width=".055" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-          <div class="w3-rest"> Share</div> 
-          </div>
+          
             <style>
               /* Trigger button style */
 .share-trigger-btn {
@@ -360,6 +355,15 @@
   cursor: pointer;
 }
             </style>
+
+<p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
+<div id="openShareBtn" class="w3-button w3-light-gray share-trigger-btn w3-hover-text-teal" style="border-radius: 15px; padding: 6px 22px; padding-left: 6px; margin: 12px 0px;">
+  <div class="w3-col" style="padding-top: 2px; width: 35px;">
+  <svg width="22px" height="22px" viewBox="0 0 0.66 0.66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.578.247V.083m0 0H.413m.165 0L.331.33M.276.083H.214c-.046 0-.069 0-.087.009a.1.1 0 0 0-.036.036C.083.145.083.168.083.214v.231c0 .046 0 .069.009.087a.1.1 0 0 0 .036.036c.017.01.04.01.086.01h.231c.046 0 .069 0 .087-.009A.1.1 0 0 0 .568.533c.01-.018.01-.041.01-.087V.385" stroke="#000" stroke-width=".055" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+<div class="w3-rest" style="padding-top: 3px;"> Share</div> 
+</div>
+
 <!-- The Modal Overlay -->
 <div id="shareModal" class="share-modal-overlay">
   <!-- The Modal Content -->
@@ -444,7 +448,7 @@
             }
           });
           </script>
-        <p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
+       
     
     
 
@@ -480,7 +484,7 @@ top:62px;">
      
       
 <div id="Main"  class="slide w3-center  w3-small">
-          <a href="{{site.url }}/shimla-honeymoon-tour-packages.html">
+          <a href="{{site.url }}/golden-triangle-honeymoon-tour-packages.html">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="30px" height="30px" viewBox="0 0 450.000000 450.000000" preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,450.000000) scale(0.100000,-0.100000)" stroke="none">

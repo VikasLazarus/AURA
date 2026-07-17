@@ -33,10 +33,10 @@ conclusion:
   <li><strong>Romantic Charm:</strong> Ideal for couples, featuring candle-light dinners and scenic walks on the Ridge.</li>
 </ul>
 
-<h1>Detailed 12-Day Itinerary Overview</h1>
+<h2>Detailed 12-Day Itinerary Overview</h2>
 <p>To ensure you get the most out of your <strong>Golden Triangle Tour with Himachal</strong>, we have curated a comprehensive schedule.</p>
 
-<h2>Part 1: The Royal Heritage (Delhi, Agra, & Jaipur)</h2>
+<h3>Part 1: The Royal Heritage (Delhi, Agra, & Jaipur)</h3>
 <p><strong>Day 1: Arrival in Delhi</strong><br>
 Upon your arrival at Delhi Airport, our representative will greet you. Afterward, you will be transferred to your hotel. Spend the evening exploring the local markets of Chandni Chowk.</p>
 <p><strong>Day 2: Exploring the Capital</strong><br>
@@ -48,7 +48,7 @@ Leave for Jaipur, the "Pink City." En route, stop at Fatehpur Sikri, an ancient 
 <p><strong>Day 5: The Grandeur of Jaipur</strong><br>
 Visit Amber Fort and enjoy an elephant or jeep ride. Later, explore Hawa Mahal (Palace of Winds) and the City Palace museum.</p>
 
-<h2>Part 2: The Himalayan Retreat (Shimla & Manali)</h2>
+<h3>Part 2: The Himalayan Retreat (Shimla & Manali)</h3>
 <p><strong>Day 6: Jaipur to Delhi & Overnight to Shimla</strong><br>
 Travel back to Delhi. From there, you can choose a day journey by cab or an overnight AC Volvo journey to Shimla.</p>
 <p><strong>Day 7: Shimla Arrival & Local Sightseeing</strong><br>
@@ -64,7 +64,7 @@ If weather permits, travel to Rohtang Pass, one of the highest motorable roads i
 <p><strong>Day 12: Departure to Delhi/Chandigarh</strong><br>
 Finally, conclude your journey with a drop-off at Chandigarh or Delhi Airport for your flight home.</p>
 
-<h1>Essential Travel Highlights for Couples</h1>
+<h2>Essential Travel Highlights for Couples</h2>
 <table border="1">
   <tr>
     <th>Location</th>
@@ -93,7 +93,7 @@ Finally, conclude your journey with a drop-off at Chandigarh or Delhi Airport fo
   </tr>
 </table>
 
-<h1>Professional Travel Tips for Your Journey</h1>
+<h2>Professional Travel Tips for Your Journey</h2>
 <p>To make your <strong>Golden Triangle Tour with Himachal</strong> seamless, consider these expert recommendations:</p>
 <ol>
   <li><strong>Best Time to Visit:</strong> For pleasant weather, plan your trip between March and June. Conversely, if you love snow, December to February is ideal for Himachal.</li>
@@ -102,10 +102,10 @@ Finally, conclude your journey with a drop-off at Chandigarh or Delhi Airport fo
   <li><strong>Stay Hydrated:</strong> Mountain travel can cause motion sickness. Therefore, keep water and light snacks handy during long drives.</li>
 </ol>
 
-<h1>Package Inclusions & Exclusions</h1>
+<h2>Package Inclusions & Exclusions</h2>
 <p>Based on standard premium offerings, here is what you can expect in your tour:</p>
 
-<h2>What is Included?</h2>
+<h3>What is Included?</h3>
 <ul>
   <li><strong>Private Transportation:</strong> A dedicated Sedan (Etios/Dzire) for all transfers and sightseeing.</li>
   <li><strong>Accommodation:</strong> Comfortable stays in Shimla (2 Nights) and Manali (3 Nights).</li>
@@ -114,7 +114,7 @@ Finally, conclude your journey with a drop-off at Chandigarh or Delhi Airport fo
   <li><strong>Taxes:</strong> All toll taxes, parking fees, and driver allowances.</li>
 </ul>
 
-<h2>What is Excluded?</h2>
+<h3>What is Excluded?</h3>
 <ul>
   <li>Airfare or Railway tickets.</li>
   <li>Adventure activity fees (Paragliding, Rafting).</li>

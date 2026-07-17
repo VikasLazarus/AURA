@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/favicon.ico">
+  <meta name="description"
+    content="{{ page.discription }}">
+  <meta name="keywords"
+    content="{{ page.keywords }}">
+  <meta name="author" content="Trip Quest Holidays">
+ <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "WebSite",
+    "name" : "Tourist Hill Travels",
+    "url" : "https://touristhill.in/"
+}
+</script>
+  <style>
+    #Main svg {
+      fill: #757575;
+    }
+
+    .slider-container {
+        overflow: hidden;
+      position: relative;
+      
+      width: 100%;
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 10px; 
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      border-radius: 8px;
+      scrollbar-width: none; 
+    }
+
+    .slider-track::-webkit-scrollbar {
+      display: none; 
+    }
+
+    .slide {
+      flex: 0 0 var(--slide-width, 250px); 
+      scroll-snap-align: start; 
+      display: flex;
+     
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.6);
+      color: #484848;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.2s, opacity 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slider-btn:hover { background: #c31432; color: #ffffff; }
+    .prev-btn { left: -0px; } 
+    .next-btn { right: -0px; }
+
+    .slider-btn.disabled {
+      opacity: 0.0;
+      pointer-events: none; 
+    }
+
+    /* NEW: Hide navigation buttons on screens smaller than 768px */
+    @media (max-width: 768px) {
+      .slider-btn {
+        display: none;
+      }
+    }
+
+  </style>
+<style>
+  /* Keeps the extra text hidden by default */
+  #more {
+    display: none;
+  }
+
+  /* The class applied via JavaScript to stick the button to the bottom */
+  .fixed-bottom {
+    position: fixed !important; /* Forces it to override standard flow */
+    bottom: 20px;
+    right: 20px; /* Adjust this to center/left if you prefer */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    border-radius: 30px;
+    background-color: white;
+    padding: 4px 22px;
+    /* Optional: Adding a shadow makes it stand out when floating */
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3); 
+  }
+</style>
+  
+  <style>
+    .w3-round {
+      border-radius: 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+
+   
+
+    .w3-content {
+      max-width: 1100px;
+    }
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+    .slide-1 {
+      width: fit-content;
+    }
+
+    .slide-2 {
+
+
+
+      height: 530px;
+      width: 320px;
+      border-radius: 10px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+   <!--end-->
+<style>
+   .aa {
+      overflow: hidden;
+      width: 15px;
+      height: 36px;
+      transform: skewX(-20deg);
+      background-image: linear-gradient(to right, #ffffff, #ffffff00, #ffffff, #ffffff);
+      opacity: 0.3;
+      position: absolute;
+      animation-name: example;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: right;
+    }
+
+    @keyframes example {
+      0% {
+        left: 0%;
+        top: 0px;
+        opacity: 0;
+      }
+
+      25% {
+        left: 25%;
+        top: 0px;
+        opacity: 0.3;
+      }
+
+      50% {
+        left: 50%;
+        top: 0px;
+        opacity: 0.5;
+      }
+
+      75% {
+        left: 75%;
+        top: 0px;
+        opacity: 0.3;
+      }
+
+      100% {
+        left: 90%;
+        top: 0px;
+        opacity: 0;
+      }
+    }
+    #more {display: none;}
+    .HR {
+  margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    min-height: 1px;
+    min-width: 100%;
+    background: linear-gradient(270deg, hsla(0, 0%, 100%, .05) -.13%, hsla(0, 0%, 88%, .05) 0, #e0e0e0 49.17%, hsla(0, 0%, 88%, .05));
+}
+@media (max-width: 576px) {
+    .HR {
+        min-width: fit-content;
+        margin: 30px 0;
+    }
+}
+#Main svg { fill: #a0a0a0; }
+</style>
+
+{% include form1.html %}
+{% include form2.html %}
+<!-- Navbar -->
+{% include nav.html %}
+
+
+
+
+  <!-- Header -->
+
+
+
+
+ 
+
+<div class="w3-row-padding w3-padding-16 w3-padding w3-content">
+    <div>
+      <div class="w3-row w3-white">
+        
+         <div class="w3-row w3-text-gray w3-margin-bottom" >
+   <span class="w3-hover-text-teal"> <a href="https://tripquestholidays.in">
+    <div class="w3-col" style="width: 30px; padding-top: 2px; padding-right: 3px;">
+      <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" fill="#484848"></path>
+<path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#FFFFFF"></path>
+</svg></div>
+<div class="w3-rest" style="padding-bottom: 0px; padding-top: 2px; overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;">
+    Home</a></span> / <span class="w3-hover-text-teal"> {{ page.title }}</span></div>
+</div>
+        
+<div style="margin-top: 40px;">
+        <h1 class="w3-text-dark-gray w3-margin-top" style="font-size: 28px;"><strong>{{ page.title }}</strong></h1>
+        <div class="w3-row">
+          
+            <style>
+              /* Trigger button style */
+.share-trigger-btn {
+ 
+  cursor: pointer;
+  background-color: white;
+  
+  border: none;
+  border-radius: 5px;
+}
+
+/* Modal Overlay - Hidden by default */
+.share-modal-overlay {
+  display: none; /* Hidden */
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); /* Dim background */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box */
+.share-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.share-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.share-modal-header h3 { margin: 0; }
+.close-modal {
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Share Buttons Grid */
+.share-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.share-btn {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+/* Brand Colors */
+.wa { background-color: #25D366; }
+.fb { background-color: #1877F2; }
+.tw { background-color: #000000; }
+.li { background-color: #0A66C2; }
+
+/* Copy Link Section */
+.copy-link-section {
+  display: flex;
+  gap: 10px;
+}
+.copy-link-section input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f8f9fa;
+}
+.copy-link-section button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+            </style>
+
+<p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
+
+<div id="openShareBtn" class="share-trigger-btn" style="border-radius: 15px; margin: 12px 0px; width: fit-content;">
+  <div class="w3-col" style="padding-top: 2px; width: 26px;">
+  <svg width="16px" height="16px" viewBox="0 0 0.66 0.66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.578.247V.083m0 0H.413m.165 0L.331.33M.276.083H.214c-.046 0-.069 0-.087.009a.1.1 0 0 0-.036.036C.083.145.083.168.083.214v.231c0 .046 0 .069.009.087a.1.1 0 0 0 .036.036c.017.01.04.01.086.01h.231c.046 0 .069 0 .087-.009A.1.1 0 0 0 .568.533c.01-.018.01-.041.01-.087V.385" stroke="#000" stroke-width=".055" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+<div class="w3-rest w3-tiny" style="padding-top: 4px;"> Share</div> 
+</div>
+
+<!-- The Modal Overlay -->
+<div id="shareModal" class="share-modal-overlay">
+  <!-- The Modal Content -->
+  <div class="share-modal-content">
+    
+    <div class="share-modal-header">
+      <h3>Share via</h3>
+      <span class="close-modal" id="closeShareBtn">&times;</span>
+    </div>
+    
+    <div class="share-options">
+      <!-- These links will be populated by JavaScript -->
+      <a href="#" id="shareWa" target="_blank" class="w3-button share-btn wa">WhatsApp</a>
+      <a href="#" id="shareFb" target="_blank" class="w3-button share-btn fb">Facebook</a>
+      <a href="#" id="shareTw" target="_blank" class="w3-button share-btn tw">X (Twitter)</a>
+      <a href="#" id="shareLi" target="_blank" class="w3-button share-btn li">LinkedIn</a>
+    </div>
+
+    <div class="copy-link-section">
+      <input type="text" id="pageUrlInput" readonly>
+      <button id="copyLinkBtn">Copy Link</button>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // 1. Get Elements
+            const modal = document.getElementById("shareModal");
+            const openBtn = document.getElementById("openShareBtn");
+            const closeBtn = document.getElementById("closeShareBtn");
+            const copyBtn = document.getElementById("copyLinkBtn");
+            const urlInput = document.getElementById("pageUrlInput");
+          
+            // 2. Get Current Page Info
+            // encodeURIComponent ensures special characters in your URL don't break the share links
+            const pageUrl = encodeURIComponent(window.location.href); 
+            const pageTitle = encodeURIComponent(document.title);
+          
+            // 3. Set up the working Share Links dynamically
+            document.getElementById("shareWa").href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+            document.getElementById("shareFb").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+            document.getElementById("shareTw").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+            document.getElementById("shareLi").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+            
+            // Set the visual URL input for the copy section
+            urlInput.value = window.location.href;
+          
+            // 4. Modal Open/Close Logic
+            openBtn.onclick = function() {
+              modal.style.display = "flex";
+            }
+            
+            closeBtn.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // Close modal if user clicks anywhere outside the white box
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          
+            // 5. Copy Link Logic
+            copyBtn.onclick = function() {
+              // Select the text field
+              urlInput.select();
+              urlInput.setSelectionRange(0, 99999); // For mobile devices
+          
+              // Copy to clipboard using modern API
+              navigator.clipboard.writeText(urlInput.value).then(() => {
+                // Temporarily change button text to show success
+                copyBtn.innerText = "Copied!";
+                setTimeout(() => { copyBtn.innerText = "Copy Link"; }, 2000);
+              }).catch(err => {
+                console.error("Failed to copy: ", err);
+              });
+            }
+          });
+          </script>
+       
+    
+    
+
+    <div class="w3-row w3-margin-top"  id="more">
+      <div class="w3-round-xlarge w3-padding w3-small" style="background-image: linear-gradient(#f5f5f5, #ffffff);">
+       {{ content }} 
+       </div>
+       
+
+            
+
+    </div>
+    <div class="w3-row w3-center">
+<b class="w3-margin-bottom w3-hover-text-teal w3-center w3-button w3-hover-white" onclick="myFunction()" id="myBtn">Continue Reading</b>
+</div>    
+</div>
+<div class="HR"></div>
+</div>
+</div>
+</div>
+
+
+  <!--Home Nav 2-->
+
+
+     <div>
+     <div class="w3-row">
+      
+        <div>
+
+<!--Home Layout-->
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
+
+
+
+  <div class="w3-large w3-content w3-padding w3-text-dark-gray w3-margin-top">
+    <div class="w3-col w3-right" style="width: 90px;">
+      <a  href="/golden-triangle-tour-packages.html" aria-label="View all Golden Triangle tour packages">
+        <div class="w3-row w3-right w3-right-align w3-text-dark-gray w3-small">
+         
+          <div class="w3-col w3-right" style="width: 30px; padding:13px 6px;">
+            <div class="w3-teal w3-round-xxlarge" style="padding-right:5px; padding-top:4px; width: 22px; height: 22px;">
+            <svg aria-hidden="true" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path fill="#ffffff" d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+            </svg>
+</div>
+          </div>
+          <div class="w3-rest" style="padding:16px 6px;">View All</div>
+
+        </div>
+      </a>
+    </div>
+    <div class="w3-rest">
+    <h2 class="w3-large">
+      <strong>Golden Triangle Honeymoon Tour Packages</strong>
+    </h2>
+  </div> 
+  
+  </div>
+  <br>
+
+
+  <div class="w3-row">
+
+
+
+
+
+   <div class="w3-content " >
+  
+    
+    <div class="w3-row w3-row-padding" style="margin: 0px 0px;">
+
+
+
+
+<!-- 1. Pull the filter category dynamically from the CURRENT page's front matter -->
+{% assign cat_1 = page.category %}
+{% assign cat_2 = page.type %}
+{% for post in site.tour %}
+  <!-- 2. Cleaned up the conditional to check against the variable without quotes -->
+  {% if post.category contains cat_1 and post.category contains cat_2 %}
+    
+    <!-- Prevent the current tour page from displaying inside its own related list -->
+    {% if post.url != page.url %}
+
+      <!--1-->
+      <div class="w3-third" style="margin-bottom: 30px; height: fit-content;">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ post.url | relative_url }}">
+          <div class="w3-row" style="height: 300px; width: 100%;">
+            <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 }}"
+                 src="{{ '/assets/images/' | append: post.img1 | relative_url }}"
+                 style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
+          </div>
+  
+          <div class="w3-row">
+            <div class="w3-row w3-margin-top">
+              <div class="w3-left w3-text-gray w3-small" style="font-weight: 700;">
+                {{ post.duration }}
+              </div>
+              <div class="w3-right w3-text-gray w3-small"></div>
+            </div>
+  
+            <h3 class="w3-text-dark-gray"
+                style="margin: 8px 0px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 15px; font-weight: 500;">
+              {{ post.title }}
+            </h3>
+            
+            <p class="w3-small w3-text-dark-gray">From : {{ post.from_location }} | By : {{ post.tour_by }}</p>
+            
+            <div class="w3-row w3-small w3-text-gray w3-round-large w3-margin-bottom"
+                 style="padding: 6px 12px; background-color: #f8f9fa;">
+              Destinations: {{ post.destinations }} Etc.
+            </div>
+  
+            <b class="w3-large">INR {{ post.price }} <span class="w3-small w3-text-gray">{{ post.price_per }}</span> </b>
+            <br><strike class="w3-text-gray">INR {{ post.price_x }}</strike>
+          </div>
+        </a>
+  
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col" style="width: 50px;">
+            <a href="tel:+918219471645" aria-label="Call Now To Enquire"
+               class="w3-button w3-light-gray w3-small w3-border w3-border-sand"
+               style="width: 34px; height: 34px; padding: 0px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
+              </svg>
+            </a>
+          </div>
+          <div class="w3-rest">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-small w3-teal"
+                    style="border-radius: 30px; padding-left: 40px; padding-right: 40px;">
+              Request Callback
+            </button>
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+
+
+        <!--View All-->
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+     
+    </div>
+  </div>
+
+
+<!--conclusion-->
+      {% for block in page.conclusion %}
+  <section class="w3-content w3-container conclusion-section">
+    {% if block.title %}
+      <h2 class="w3-xlarge w3-text-dark-gray">{{ block.title }}</h2>
+    {% endif %}
+
+    {% for item in block.content %}
+      {% if item.p %}
+        <p class="w3-text-gray">{{ item.p }}</p>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endfor %}
+     <!--faq-->
+
+<!--Includes-->
+{% include card1.html %}
+{% include reviews.html %}
+{% include faq.html %}
+{% include about.html %}
+{% include team.html %}
+
+
+ 
+  
+
+   <!-- Footer -->
+  
+{% include footer.html %}
+  <!-- Swiper JS -->
+  
+<script>
+      document.querySelectorAll(".slider-container").forEach(c => { let t = c.querySelector(".slider-track"), p = c.querySelector(".prev-btn"), n = c.querySelector(".next-btn"), u = () => { p.classList.toggle("disabled", t.scrollLeft <= 1), n.classList.toggle("disabled", t.scrollLeft + t.clientWidth >= t.scrollWidth - 1) }; n.addEventListener("click", () => { t.scrollBy({ left: t.clientWidth, behavior: "smooth" }) }), p.addEventListener("click", () => { t.scrollBy({ left: -t.clientWidth, behavior: "smooth" }) }), t.addEventListener("scroll", u), window.addEventListener("resize", u), u() });
+    </script>
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      // STATE: COLLAPSED
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      btnText.innerHTML = "Continue Reading"; 
+      
+      // Remove the fixed class so it jumps back below the paragraph
+      btnText.classList.remove("fixed-bottom");
+      
+      // Scrolls to the absolute top of the page smoothly
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+    } else {
+      // STATE: EXPANDED
+      dots.style.display = "none";
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read less"; 
+      
+      // Add the fixed class to lock it to the bottom of the screen
+      btnText.classList.add("fixed-bottom");
+    }
+  }
+  </script>
+    </body>
+    </html>
