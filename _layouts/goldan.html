@@ -95,73 +95,25 @@
 
   </style>
 <style>
-  /* FAQ Container Styling */
-  .kufri-faq-container {
-    max-width: 800px;
-    margin: 40px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0 15px;
+  /* Keeps the extra text hidden by default */
+  #more {
+    display: none;
   }
 
-  .kufri-faq-heading {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-  }
-
-  /* The Question Box (Accordion) */
-  details.kufri-faq-item {
-    background-color: #f9f9f9;
-    border: 1px solid #f1f1f1;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 15px;
-    transition: all 0.3s ease;
-  }
-
-  /* Hover Effect */
-  details.kufri-faq-item:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border-color: #f2f2f2;
-  }
-
-  /* The Question Text */
-  summary.kufri-faq-question {
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    list-style: none; /* Hides default triangle in some browsers */
-    color: #333;
-    position: relative;
-    padding-right: 30px;
-  }
-
-  /* Custom Plus Icon */
-  summary.kufri-faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 0;
-    font-weight: bold;
-    color: #FF5A5F;
-    font-size: 1.5rem;
-    line-height: 1rem;
-  }
-
-  /* Change to Minus when open */
-  details[open] summary.kufri-faq-question::after {
-    content: '-';
-  }
-
-  /* The Answer Text */
-  .kufri-faq-answer {
-    margin-top: 15px;
-    line-height: 1.6;
-    color: #555;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
+  /* The class applied via JavaScript to stick the button to the bottom */
+  .fixed-bottom {
+    position: fixed !important; /* Forces it to override standard flow */
+    bottom: 20px;
+    right: 20px; /* Adjust this to center/left if you prefer */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    border-radius: 30px;
+    background-color: white;
+    padding: 4px 22px;
+    /* Optional: Adding a shadow makes it stand out when floating */
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3); 
   }
 </style>
+  
   <style>
     .w3-round {
       border-radius: 30px;
@@ -307,12 +259,195 @@
     Home</a></span> / <span class="w3-hover-text-teal"> {{ page.title }}</span></div>
 </div>
         
-<div class="w3-margin-top">
+<div style="margin-top: 40px;">
         <h1 class="w3-text-dark-gray w3-margin-top" style="font-size: 28px;"><strong>{{ page.title }}</strong></h1>
+        <div class="w3-row">
+          <div id="openShareBtn" class="share-trigger-btn w3-hover-text-teal" style="margin: 12px 0px;">
+            <div class="w3-col" style="width: 28px;">
+            <svg width="22px" height="22px" viewBox="0 0 0.66 0.66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.578.247V.083m0 0H.413m.165 0L.331.33M.276.083H.214c-.046 0-.069 0-.087.009a.1.1 0 0 0-.036.036C.083.145.083.168.083.214v.231c0 .046 0 .069.009.087a.1.1 0 0 0 .036.036c.017.01.04.01.086.01h.231c.046 0 .069 0 .087-.009A.1.1 0 0 0 .568.533c.01-.018.01-.041.01-.087V.385" stroke="#000" stroke-width=".055" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          <div class="w3-rest"> Share</div> 
+          </div>
+            <style>
+              /* Trigger button style */
+.share-trigger-btn {
  
+  cursor: pointer;
+  background-color: white;
+  
+  border: none;
+  border-radius: 5px;
+}
+
+/* Modal Overlay - Hidden by default */
+.share-modal-overlay {
+  display: none; /* Hidden */
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); /* Dim background */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box */
+.share-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.share-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.share-modal-header h3 { margin: 0; }
+.close-modal {
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Share Buttons Grid */
+.share-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.share-btn {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+/* Brand Colors */
+.wa { background-color: #25D366; }
+.fb { background-color: #1877F2; }
+.tw { background-color: #000000; }
+.li { background-color: #0A66C2; }
+
+/* Copy Link Section */
+.copy-link-section {
+  display: flex;
+  gap: 10px;
+}
+.copy-link-section input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f8f9fa;
+}
+.copy-link-section button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+            </style>
+<!-- The Modal Overlay -->
+<div id="shareModal" class="share-modal-overlay">
+  <!-- The Modal Content -->
+  <div class="share-modal-content">
+    
+    <div class="share-modal-header">
+      <h3>Share via</h3>
+      <span class="close-modal" id="closeShareBtn">&times;</span>
+    </div>
+    
+    <div class="share-options">
+      <!-- These links will be populated by JavaScript -->
+      <a href="#" id="shareWa" target="_blank" class="w3-button share-btn wa">WhatsApp</a>
+      <a href="#" id="shareFb" target="_blank" class="w3-button share-btn fb">Facebook</a>
+      <a href="#" id="shareTw" target="_blank" class="w3-button share-btn tw">X (Twitter)</a>
+      <a href="#" id="shareLi" target="_blank" class="w3-button share-btn li">LinkedIn</a>
+    </div>
+
+    <div class="copy-link-section">
+      <input type="text" id="pageUrlInput" readonly>
+      <button id="copyLinkBtn">Copy Link</button>
+    </div>
+
+  </div>
+</div>
+
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            // 1. Get Elements
+            const modal = document.getElementById("shareModal");
+            const openBtn = document.getElementById("openShareBtn");
+            const closeBtn = document.getElementById("closeShareBtn");
+            const copyBtn = document.getElementById("copyLinkBtn");
+            const urlInput = document.getElementById("pageUrlInput");
+          
+            // 2. Get Current Page Info
+            // encodeURIComponent ensures special characters in your URL don't break the share links
+            const pageUrl = encodeURIComponent(window.location.href); 
+            const pageTitle = encodeURIComponent(document.title);
+          
+            // 3. Set up the working Share Links dynamically
+            document.getElementById("shareWa").href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+            document.getElementById("shareFb").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+            document.getElementById("shareTw").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+            document.getElementById("shareLi").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+            
+            // Set the visual URL input for the copy section
+            urlInput.value = window.location.href;
+          
+            // 4. Modal Open/Close Logic
+            openBtn.onclick = function() {
+              modal.style.display = "flex";
+            }
+            
+            closeBtn.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // Close modal if user clicks anywhere outside the white box
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          
+            // 5. Copy Link Logic
+            copyBtn.onclick = function() {
+              // Select the text field
+              urlInput.select();
+              urlInput.setSelectionRange(0, 99999); // For mobile devices
+          
+              // Copy to clipboard using modern API
+              navigator.clipboard.writeText(urlInput.value).then(() => {
+                // Temporarily change button text to show success
+                copyBtn.innerText = "Copied!";
+                setTimeout(() => { copyBtn.innerText = "Copy Link"; }, 2000);
+              }).catch(err => {
+                console.error("Failed to copy: ", err);
+              });
+            }
+          });
+          </script>
         <p class="w3-text-gray w3-small">{{ page.first-100 }} <span id="dots">...</span></p>
     
     
+
     <div class="w3-row w3-margin-top"  id="more">
       <div class="w3-round-xlarge w3-padding w3-small" style="background-image: linear-gradient(#f5f5f5, #ffffff);">
        {{ content }} 
@@ -1143,24 +1278,33 @@ c-5 -27 -9 -30 -41 -27 l-36 3 -12 -93 c-6 -51 -14 -108 -17 -125 l-6 -33
     }
   </script>
 <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
-    
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Continue Reading"; 
-        moreText.style.display = "none";
-        // Scrolls to the absolute top of the page smoothly
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less"; 
-        moreText.style.display = "inline";
-        
-      }
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      // STATE: COLLAPSED
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      btnText.innerHTML = "Continue Reading"; 
+      
+      // Remove the fixed class so it jumps back below the paragraph
+      btnText.classList.remove("fixed-bottom");
+      
+      // Scrolls to the absolute top of the page smoothly
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+    } else {
+      // STATE: EXPANDED
+      dots.style.display = "none";
+      moreText.style.display = "inline";
+      btnText.innerHTML = "Read less"; 
+      
+      // Add the fixed class to lock it to the bottom of the screen
+      btnText.classList.add("fixed-bottom");
     }
-    </script>
+  }
+  </script>
     </body>
     </html>
