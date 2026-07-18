@@ -11,7 +11,7 @@ discription: "Himachal Tour Packages are here for you. First, find top deals tod
 keywords: "Himachal Tour Packages, family trip to Shimla, Manali honeymoon tour, cheap hill station holidays, India travel, budget travel in India, best time to visit Himachal, solo travel packages"
 first-100: "Your wedding is a whirlwind of joy, tradition, and celebration. Consequently, the honeymoon that follows should be nothing short of a masterpiece—a tranquil yet exhilarating beginning to your shared life. When searching for the perfect destination, Golden Triangle Honeymoon Tours consistently emerge as the premier choice for couples seeking a blend of heritage, adventure, and unmatched romance."
 date: 2023-01-01 10:00:00 +0530
-destinations: Shimla, Manali, Dharamshala, Dalhousie, Leh Ladakh, Spiti
+destinations:
 conclusion:
   - title: "Conclusion"
     content:
