@@ -70,12 +70,12 @@
 
     <div style="display:flex; align-items:center; gap: 15px;">
      
-      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button nav-link w3-light-gray w3-small w3-hover-dark-gray" style="margin-top: -6px; border-radius: 13px; padding: 6.5px 20px;">Quick Enquire</button>
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button nav-link w3-light-gray w3-small w3-hover-dark-gray" style="box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); margin-top: -6px; border-radius: 13px; padding: 6.5px 20px; font-weight: 700;">Quick Enquire</button>
     
     </div>
 
     <div class="w3-bar-item w3-right w3-hide-large w3-hide-medium" style="padding-left: 12px;">
-      <button onclick="document.getElementById('menuNav').style.display='block'" class="w3-black" style="border-radius: 13px; height: 34px; width: 34px; border:none; padding:0; cursor:pointer;" aria-label="Open mobile menu" aria-haspopup="dialog" aria-expanded="false">
+      <button onclick="document.getElementById('menuNav').style.display='block'" class="w3-black" style="box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); border-radius: 13px; height: 34px; width: 34px; border:none; padding:0; cursor:pointer;" aria-label="Open mobile menu" aria-haspopup="dialog" aria-expanded="false">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="margin:2px; padding:6.5px 8px;" width="30px" fill="#ffffff" viewBox="0 0 448 512">
           <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
         </svg>
@@ -119,13 +119,13 @@ font-size: 18px;
   
 
 </style>
-<div id="menuNav" onclick="document.getElementById('menuNav').style.display='none'" class="w3-row w3-hide-large w3-hide-medium w3-large" style="background-color: #484848b7; position:fixed; top: 0px; display: none; z-index: 48; height: 100%; width: 100%;" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+<div id="menuNav" onclick="document.getElementById('menuNav').style.display='none'" class="w3-row w3-hide-large w3-hide-medium w3-large" style="background-color: #484848b7; position:fixed; top: 0px; display: none; z-index: 54; height: 100%; width: 100%;" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
   
   <div class="w3-row w3-padding w3-text-dark-gray w3-white" style=" border-radius: 0px 0px 15px 15px; height: 70%; width: 100%;">
     
     
-    <div class="w3-row sidebar-nav" style="padding-top: 100px;">
-
+    <div class="w3-row sidebar-nav w3-display-container" style="padding-top: 100px;">
+<div class="w3-row w3-red" style="z-index:120; position: fixed; margin-top: -80px;">ggggggg</div>
       
 
         <a href="{{ site.url }}" title="Discover">
