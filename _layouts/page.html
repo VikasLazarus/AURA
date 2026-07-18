@@ -551,10 +551,10 @@
 
       <!--1-->
       <div class="w3-third" style="margin-bottom: 30px; height: fit-content;">
-        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ post.url | relative_url }}">
+        <a class="w3-row" style="display: block; text-decoration: none;" href="{{ site.url }}/{{ post.permalink }}">
           <div class="w3-row" style="height: 300px; width: 100%;">
             <img class="w3-border w3-border-light-gray" alt="{{ post.imgh1 }}"
-                 src="/assets/images/{{ post.img1 }}"
+                 src="{{ site.url }}/assets/images/{{ post.img1 }}"
                  style="border-radius: 15px; object-fit: cover; overflow: hidden; height: 100%; width: 100%;">
           </div>
   
